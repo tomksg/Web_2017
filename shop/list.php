@@ -14,6 +14,10 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
 <body>
+<?php
+$category=$_GET[category];
+ ?>
+
   <div class="navbar-wrapper">
     <div class="container">
 
@@ -31,7 +35,7 @@
                <div class="form-group">
                  <input type="text" class="form-control" placeholder="Search">
                </div>
-               <button type="submit" class="btn btn-default" onclick="javascript:location.href='localhost/shop/list.php'">Submit</button>
+               <button type="submit" class="btn btn-default">Submit</button>
              </form>
         </div>
       </nav>
@@ -51,7 +55,9 @@ body { padding-bottom: 70px; }
 
    <div class="container">
    <h2>분류</h2>
-
+   <?php
+       $today=date("Y-m-d H:i:s");
+       echo $today ?>
   <hr width="800">
   <!-- 상품분류 선택이미지,페이지 누르면 링크로 redirect되게해야함 -->
       <dl>
@@ -60,9 +66,8 @@ body { padding-bottom: 70px; }
        <div class="row" >
          <div class="col-lg-2" >
            <a href="<?php
-           echo "goods.php?id=";
-           $temp = 2;
-           echo $temp;
+            $temp_id = 2;
+           echo "goods.php?category=",$category,"?id=",$temp_id;
            ?>">
            <img src="img/squid.jpg" alt="Generic placeholder image" width="180" height="140">
          </a>
@@ -72,16 +77,26 @@ body { padding-bottom: 70px; }
 <!-- 우리가 원하는 모양으로 나타내주는 코드를 그냥 php내부에서 html로 만들어줘야할듯 -->
          </div>
          <div class="col-lg-2" >
+           <a href="<?php
+            $temp_id = 2;
+           echo "goods.php?category=",$category,"?id=",$temp_id;
+           ?>">
            <img src="img/squid.jpg" alt="Generic placeholder image" width="180" height="140">
+         </a>
            <strong>상품명</strong> 건조오징어
-           <br>
+          <br>
            <strong>가격</strong> 만원
 <!-- 우리가 원하는 모양으로 나타내주는 코드를 그냥 php내부에서 html로 만들어줘야할듯 -->
          </div>
          <div class="col-lg-2" >
+           <a href="<?php
+            $temp_id = 2;
+           echo "goods.php?category=",$category,"?id=",$temp_id;
+           ?>">
            <img src="img/squid.jpg" alt="Generic placeholder image" width="180" height="140">
+         </a>
            <strong>상품명</strong> 건조오징어
-      <br>
+          <br>
            <strong>가격</strong> 만원
 <!-- 우리가 원하는 모양으로 나타내주는 코드를 그냥 php내부에서 html로 만들어줘야할듯 -->
          </div>
@@ -89,23 +104,38 @@ body { padding-bottom: 70px; }
        <br />
        <div class="row">
          <div class="col-lg-2" >
+           <a href="<?php
+            $temp_id = 2;
+           echo "goods.php?category=",$category,"?id=",$temp_id;
+           ?>">
            <img src="img/squid.jpg" alt="Generic placeholder image" width="180" height="140">
+         </a>
            <strong>상품명</strong> 건조오징어
-           <br>
+          <br>
            <strong>가격</strong> 만원
 <!-- 우리가 원하는 모양으로 나타내주는 코드를 그냥 php내부에서 html로 만들어줘야할듯 -->
          </div>
          <div class="col-lg-2" >
+           <a href="<?php
+            $temp_id = 2;
+           echo "goods.php?category=",$category,"?id=",$temp_id;
+           ?>">
            <img src="img/squid.jpg" alt="Generic placeholder image" width="180" height="140">
+         </a>
            <strong>상품명</strong> 건조오징어
-        <br>
+          <br>
            <strong>가격</strong> 만원
- <!-- 우리가 원하는 모양으로 나타내주는 코드를 그냥 php내부에서 html로 만들어줘야할듯 -->
+<!-- 우리가 원하는 모양으로 나타내주는 코드를 그냥 php내부에서 html로 만들어줘야할듯 -->
          </div>
          <div class="col-lg-2" >
+           <a href="<?php
+            $temp_id = 2;
+           echo "goods.php?category=",$category,"?id=",$temp_id;
+           ?>">
            <img src="img/squid.jpg" alt="Generic placeholder image" width="180" height="140">
+         </a>
            <strong>상품명</strong> 건조오징어
-           <br>
+          <br>
            <strong>가격</strong> 만원
 <!-- 우리가 원하는 모양으로 나타내주는 코드를 그냥 php내부에서 html로 만들어줘야할듯 -->
          </div>

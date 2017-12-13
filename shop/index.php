@@ -52,6 +52,10 @@
     <span class="vertical">
     건어물집 소개
     </span>
+    <!-- php업데이트가 느려서 업데이트된건지 확인하려고 넣어둔 현재시간출력함수 -->
+    <?php
+    $today=date("Y-m-d H:i:s");
+    echo $today ?>
   </div>
       <div data-spy="scroll" data-target="ex1" data-offset="0" class="scrollspy-example">
     <div id="info" class="jumbotron">
@@ -72,24 +76,34 @@
     <div id="list" class="container">
     <div class="row">
           <div class="col-lg-3">
-            <a href="<?php
-            echo "list.php?id=";
-            $temp = 2;
-            echo $temp;
-            ?>" class="thumbnail">
+            <a href="list.php?category=1" class="thumbnail">
             <img src="img/squid.jpg" alt="..."></a>
-<!-- 여기서 디비에서 값이랑 아이디 가져오는거 추가하고 가져오면서 img 소스에 들어갈  -->
-<!-- php 변수를 위에서 미리 정의해주자  -->
          </div>
-          <div class="col-lg-3">
-            <a href="#" class="thumbnail">
-          <img src="img/squid.jpg" alt="..."></a>
-           </div>
-          <div class="col-lg-3">
-            <a href="#" class="thumbnail">
-          <img src="img/squid.jpg" alt="..."></a>
-          </div>
+         <div class="col-lg-3">
+           <a href="list.php?category=2" class="thumbnail">
+           <img src="img/squid.jpg" alt="..."></a>
         </div>
+        <div class="col-lg-3">
+          <a href="list.php?category=3" class="thumbnail">
+          <img src="img/squid.jpg" alt="..."></a>
+       </div>
+     </div>
+     <div class="row">
+       <div class="col-lg-3">
+         <a href="list.php?category=4" class="thumbnail">
+         <img src="img/squid.jpg" alt="..."></a>
+      </div>
+      <div class="col-lg-3">
+        <a href="list.php?category=5" class="thumbnail">
+        <img src="img/squid.jpg" alt="..."></a>
+     </div>
+     <div class="col-lg-3">
+       <a href="list.php?category=6" class="thumbnail">
+       <img src="img/squid.jpg" alt="..."></a>
+    </div>
+
+</div>
+
     </div>
      <hr class="featurette-divider">
      <div id="lo" class="container">
@@ -107,6 +121,16 @@
 
 
     <footer>
+      <p>
+        <a  href="login.php">
+        관리자모드
+      </a>
+      &nbsp;&nbsp;&nbsp;
+      <a href="index.php">
+       홈페이지
+      </a>
+
+      </p>
       <p>&copy; 대표:건어물 | 사업자등록번호 : 123-45-67890
       </p>
       <p>
@@ -118,9 +142,7 @@
     </div>
 
   </div>
-    <ul class="nav nav-pills nav-justified">
-        <li role="presentation"><a href="#">관리자모드</a></li>
-    </ul>
+
 
 
 

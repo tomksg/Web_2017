@@ -12,6 +12,10 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
 <body>
+  <?php
+  $category=$_GET[category];
+  $temp_id=$_GET[id];
+   ?>
   <div class="navbar-wrapper">
     <div class="container">
 
@@ -50,9 +54,6 @@ body { padding-bottom: 70px; }
    <div class="container">
 
   <h2>분류</h2>
-  <?php
-  $temp = $_GET[id];
-  echo $temp; ?>
 <hr width="1500">
 <dl class="row">
   <div class="col-lg-3" >

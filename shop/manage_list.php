@@ -62,15 +62,23 @@ body { padding-bottom: 70px; }
            <strong>상품명</strong> 건조오징어
           <br>
            <strong>가격</strong> 만원
+           <form method="post" action="manage_goods.php">
+          <button type="submit" class="btn btn-secondary btn-sm" >상품수정</button>
+          </form>
+          <form method="post" action="delete_goods.php">
+         <button type="submit" class="btn btn-secondary btn-sm">상품삭제</button></form>
 <!-- 우리가 원하는 모양으로 나타내주는 코드를 그냥 php내부에서 html로 만들어줘야할듯 -->
          </div>
          <div class="col-lg-2" >
            <img src="img/squid.jpg" alt="Generic placeholder image" width="180" height="140">
            <strong>상품명</strong> 건조오징어
-           <form method="post" action="manage_2.php/id=2">
-             <button type="submit" class="btn btn-secondary btn-sm">수정</button></form>
+           <br />
            <strong>가격</strong> 만원
-          <button type="submit" class="btn btn-secondary btn-sm" >수정</button>
+           <form method="post" action="manage_goods.php">
+          <button type="submit" class="btn btn-secondary btn-sm" >상품수정</button>
+          </form>
+          <form method="post" action="delete_goods.php">
+         <button type="submit" class="btn btn-secondary btn-sm">상품삭제</button></form>
 <!-- 우리가 원하는 모양으로 나타내주는 코드를 그냥 php내부에서 html로 만들어줘야할듯 -->
          </div>
          <div class="col-lg-2" >
@@ -78,6 +86,11 @@ body { padding-bottom: 70px; }
            <strong>상품명</strong> 건조오징어
       <br>
            <strong>가격</strong> 만원
+           <form method="post" action="manage_goods.php">
+          <button type="submit" class="btn btn-secondary btn-sm" >상품수정</button>
+          </form>
+          <form method="post" action="delete_goods.php">
+         <button type="submit" class="btn btn-secondary btn-sm">상품삭제</button></form>
 <!-- 우리가 원하는 모양으로 나타내주는 코드를 그냥 php내부에서 html로 만들어줘야할듯 -->
          </div>
        </div>
@@ -88,6 +101,11 @@ body { padding-bottom: 70px; }
            <strong>상품명</strong> 건조오징어
            <br>
            <strong>가격</strong> 만원
+           <form method="post" action="manage_goods.php">
+          <button type="submit" class="btn btn-secondary btn-sm" >상품수정</button>
+          </form>
+          <form method="post" action="delete_goods.php">
+         <button type="submit" class="btn btn-secondary btn-sm">상품삭제</button></form>
 <!-- 우리가 원하는 모양으로 나타내주는 코드를 그냥 php내부에서 html로 만들어줘야할듯 -->
          </div>
          <div class="col-lg-2" >
@@ -95,6 +113,11 @@ body { padding-bottom: 70px; }
            <strong>상품명</strong> 건조오징어
         <br>
            <strong>가격</strong> 만원
+           <form method="post" action="manage_goods.php">
+          <button type="submit" class="btn btn-secondary btn-sm" >상품수정</button>
+          </form>
+          <form method="post" action="delete_goods.php">
+         <button type="submit" class="btn btn-secondary btn-sm">상품삭제</button></form>
  <!-- 우리가 원하는 모양으로 나타내주는 코드를 그냥 php내부에서 html로 만들어줘야할듯 -->
          </div>
          <div class="col-lg-2" >
@@ -102,6 +125,11 @@ body { padding-bottom: 70px; }
            <strong>상품명</strong> 건조오징어
            <br>
            <strong>가격</strong> 만원
+           <form method="post" action="manage_goods.php">
+          <button type="submit" class="btn btn-secondary btn-sm" >상품수정</button>
+          </form>
+          <form method="post" action="delete_goods.php">
+         <button type="submit" class="btn btn-secondary btn-sm">상품삭제</button></form>
 <!-- 우리가 원하는 모양으로 나타내주는 코드를 그냥 php내부에서 html로 만들어줘야할듯 -->
          </div>
        </div>

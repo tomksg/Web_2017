@@ -23,22 +23,17 @@
 
        <div class="row" >
          <div class="col-lg-3">
-           <img src="img/squid.jpg" alt="Generic placeholder image" width="220" height="180">
-           <!-- 이미지에 링크걸어서 각 php화면으로 redirect되게해야함 -->
+           <a href="manage_main.php">
+           <img src="img/squid.jpg" alt="move to manage_main" width="220" height="180">
+         </a>
          </div>
 
          <div class="col-lg-1">
-         <img src="img/squid.jpg" alt="Generic placeholder image" width="220" height="180">
-
+           <a href="manage_list.php">
+         <img src="img/squid.jpg" alt="move to manage_list" width="220" height="180">
+       </a>
          </div>
        </div>
-<!-- 여기다가 버튼 이벤트 정의해줘야함 -->
-       <script type="text/javascript">
-       $('#myButton').on('click', function(event) {
-event.preventDefault(); // To prevent following the link (optional)
-...
-});
-       </script>
 
 </body>
 </html>
