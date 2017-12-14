@@ -1,10 +1,9 @@
 <?php
- //아래 두줄은 에러확인용 메시지 
-// error_reporting(E_ALL); 
+ 
+// error_reporting(E_ALL);
 // ini_set("display_errors", 1);
 
-    include("config_settings.php");  
-    //DB연결을 위한 config.php를 로딩합니다.
+    include("config_settings.php");  //DB연결을 위한 config.php를 로딩합니다.
     session_start();   //세션의 시작
  
     if($_SERVER["REQUEST_METHOD"] == "POST"){
@@ -29,16 +28,16 @@
         // session_register("myusername");
         $_SESSION['login_user']=$myusername;
  
-        header("location: manage_index.php");  // welcome.php 페이지로 넘깁니다.
+        header("location: welcome.php");  // welcome.php 페이지로 넘깁니다.
     }
     else 
     {
-        //  echo "<script>alert(\"Login 실패\");</script>";
-        // $error="Your Login Name or Password is invalid";
-        header("location: login.php");
+         echo "<script>alert(\"Login 실패\");</script>";
+        $error="Your Login Name or Password is invalid";
+        header("location: login2.php");
         // echo ("<meta http-equiv='Refresh' content='5;
         //  URL=login.php'>");//read.php?id=$id
-        // exit;
+        exit;
        // header("location: 2.php");  // welcome.php 
     }
 }
@@ -66,10 +65,7 @@
       <form class="form-signin" action="" method="POST">
         <h2 class="form-signin-heading">관리자 인증</h2>
         <label for="inputId" class="sr-only">ID</label>
-        <input type="text" id="inputId" class="form-control" placeholder="ID" required autofocus> 
-
-        <!--type text로 바꿨습니다. inputemail-> inputid -->
-        
+        <input type="text" id="inputId" class="form-control" placeholder="ID" required autofocus>
         <label for="inputPassword" class="sr-only">PASSWORD</label>
         <input type="password" id="inputPassword" class="form-control" placeholder="PASSWORD" required>
         <button class="btn btn-lg btn-primary" type="submit">완료</button>
