@@ -1,3 +1,9 @@
+<?php
+
+    include("config_getdata.php");
+
+?>
+
 <!DOCTYPE html>
 <html lang="kor">
 <head>

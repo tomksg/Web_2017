@@ -1,7 +1,8 @@
 <?php
-  
+
 include('lock.php');
- 
+include("config_getdata.php");
+
 ?>
 
 
