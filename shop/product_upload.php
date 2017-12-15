@@ -117,7 +117,7 @@ if ($bd->query($query) === TRUE) {
     echo ("<meta http-equiv='Refresh' content='1;
        URL=manage_list.php'>");
 } else {
-    echo "Error: " . $sql . "<br>" . $bd->error;
+    echo "Error: " . $query . "<br>" . $bd->error;
 }
 
 $bd->close();
