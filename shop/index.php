@@ -131,6 +131,16 @@ $(document).ready(function(){
 
 
     <footer>
+      <p>
+             <a  href="login.php">
+             관리자모드
+           </a>
+           &nbsp;&nbsp;&nbsp;
+           <a href="index.php">
+            홈페이지
+           </a>
+
+           </p>
       <p>&copy; 대표:건어물 | 사업자등록번호 : 123-45-67890
       </p>
       <p>
@@ -142,11 +152,6 @@ $(document).ready(function(){
     </div>
 
   </div>
-    <ul class="nav nav-pills nav-justified">
-        <li role="presentation"><a href="#">관리자모드</a></li>
-    </ul>
-
-
 
 
 
