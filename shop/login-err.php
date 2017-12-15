@@ -28,7 +28,7 @@ ini_set("display_errors", 1);
         // session_register("myusername");
         $_SESSION['login_user']=$myusername;
 
-        header("location: welcome.php");  // welcome.php 페이지로 넘깁니다.
+        header("location: manage_index.php");  // welcome.php 페이지로 넘깁니다.
     }
     else
     {
