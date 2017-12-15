@@ -34,7 +34,7 @@ $src2 = $row['description'];
   <div class="container">
     <table class="table table-bordered">
       <thead>
-        <img src="<?php $src ?>"/>
+        <img src="<?=$src?>"/>
         <caption> 글쓰기 </caption>
       </thead>
       <tbody>
