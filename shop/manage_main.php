@@ -2,16 +2,15 @@
 
 include('lock.php');
 include("config_getdata.php");
-/*
-$myusername=addslashes($_POST['id']);
-$mypassword=addslashes($_POST['pw']);
 
-$sql="SELECT id FROM marryme WHERE id='$myusername' and pw='$mypassword'";
+$query = "SELECT image from main WHERE number =1";
+//$query2 = "SELECT description from main WHERE number=1";
+$result = mysqli_query($bd,$query) or die ("Error Querying database.");
 
-$result=mysqli_query($bd,$sql);
-if(!$result){
-die(mysqli_error($bd));
-*/
+$row = mysqli_fetch_assoc($result);
+
+$src = $row['image'];
+$src2 = $row['description'];
 
 ?>
 
@@ -35,25 +34,32 @@ die(mysqli_error($bd));
   <div class="container">
     <table class="table table-bordered">
       <thead>
+        <img src="<?php $src ?>"/>
         <caption> 글쓰기 </caption>
       </thead>
       <tbody>
-        <form action="write_ok.jsp" method="post" encType="multiplart/form-data">
+        <form action="main_upload.php" method="post" encType="multiplart/form-data">
           <tr>
             <th> 홈 이미지 </th>
+
             <!--  서버에있는 이미지파일 가져오고 새거 서버에첨부가능하게 -->
-            <td><input type="text" placeholder="squid.jpg " name="subject" class="form-control"/></td>
+
+            <td><input type="file" placeholder=" " name="upload" class="form-control"/></td>
+
+    <!-- 여기서 name upload 가 이 파일의 temp 이름이다 -->
+    <!-- <input type="submit" value="send"> -->
+
           </tr>
           <tr>
             <th>소개</th>
-            <td><textarea cols="10"  name="content" class="form-control">건어물집은 유구한 역사를 가진 전문도매상입니다.</textarea></td>
+            <td><textarea cols="10"  name="content" class="form-control"><?=$src2?></textarea></td>
           </tr>
           <tr>
             <td colspan="2">
-              <input type="button" value="저장" onclick="sendData()" class="pull-right"/>
+              <input type="sumbit" value="저장" class="pull-right"/>
               <input type="button" value="reset" class="pull-left"/>
               <!-- 리셋시 원래 서버에 저장되어있는거 업로드 -->
-              <input type="button" value="뒤로.. " class="pull-right" onclick=""/>
+              <input type="button" value="뒤로.. " class="pull-right" onclick="history.back(-1)"/>
                     <!-- <a class="btn btn-default" onclick="sendData()"> 등록 </a>
                     <a class="btn btn-default" type="reset"> reset </a>
                     <a class="btn btn-default" onclick="javascript:location.href='list.jsp'">글 목록으로...</a> -->
