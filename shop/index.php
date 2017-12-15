@@ -13,34 +13,102 @@
   <script type="text/javascript" src="C:\Users\user\Desktop\jquery-scroll-follow\lib/jquery.scrollfollow.js"></script>
 
 <style>
-#testbanner{
-        position: absolute;
-        border: 3px solid black;
 
-        left : 1150px;
-        top : 30px;
-        width: 150px;
-        height: 300px;
-    }
+#quick {
+  position: absolute;
+  right: 0;
+  top: 100px;
+  height: 200px;
+  background: #black;
+  z-index: 2;
+}
 
 
-
+}
 </style>
 </head>
 <script type="text/javascript">
-$(document).ready(function(){
-           $("#testbanner").scrollFollow({
-               speed : 800,    // 움직이는 속도
-               offset : 200     // 웹페이지 상단에서 부터의 거리
-           });
-       });
+$(function() {
+
+  var UI = {
+    init: function() {
+      this.quickMenuFn();
+      this.topBtn();
+    },
+
+    initialize: function() {
+      this.id = {
+        target: {
+          quick: '#quick',
+          stickyTop: '#footer'
+        },
+        topBtnClass: 'btn_top'
+      };
+      this.init();
+    },
+
+    quickMenuFn: function() {
+      var quick = $(this.id.target.quick);
+      var qTop = parseInt(quick.css('top'));
+
+      $(window).scroll(function() {
+        var winTop = $(window).scrollTop();
+
+        quick.stop().animate({
+          top: winTop + qTop
+        }, 400);
+
+      })
+    },
+
+    topBtn: function() {
+      var btnLocation = $('.' + this.id.topBtnClass);
+      var timerId = 0;
+
+      $(window).on('scroll', function() {
+        var winTop = $(window).scrollTop();
+        if (winTop > 200) {
+          btnLocation.fadeIn();
+          clearInterval(timerId);
+          timerId = setInterval(btnEffet, 2000);
+        } else {
+          btnLocation.fadeOut();
+          clearInterval(timerId);
+        }
+
+      });
+
+      function btnEffet() {
+        btnLocation.fadeTo('300', 0.3).fadeTo('300', 1);
+      }
+
+      this.scrollTop(btnLocation);
+    },
+
+    scrollTop: function(eTarget, speed) {
+      var speed = speed || null;
+      eTarget.on('click', function() {
+        $('html, body').animate({
+          scrollTop: $("body").offset().top
+        }, speed)
+      })
+    }
+
+  };
+
+  $(function() {
+    UI.initialize();
+  })
+
+})
+//여기까지 스크롤따라다니는 js
+
 
 </script>
 
 <body>
-  <div id="testbanner">
-          배너 테스트</br>
-    </div>
+    <div id="quick">스크롤 퀵 메뉴</div>
+
 
 
       <div class="navbar-wrapper">
@@ -143,7 +211,7 @@ $(document).ready(function(){
 
   </div>
     <ul class="nav nav-pills nav-justified">
-        <li role="presentation"><a href="#">관리자모드</a></li>
+        <li role="presentation"><a href="login.php">관리자모드</a></li>
     </ul>
 
 
