@@ -13,101 +13,34 @@
   <script type="text/javascript" src="C:\Users\user\Desktop\jquery-scroll-follow\lib/jquery.scrollfollow.js"></script>
 
 <style>
+#testbanner{
+        position: absolute;
+        border: 3px solid black;
 
-#quick {
-  position: absolute;
-  right: 0;
-  top: 100px;
-  height: 200px;
-  background: black;
-  z-index: 2;
-}
+        left : 1150px;
+        top : 30px;
+        width: 150px;
+        height: 300px;
+    }
 
 
-}
+
 </style>
 </head>
 <script type="text/javascript">
-$(function() {
-
-  var UI = {
-    init: function() {
-      this.quickMenuFn();
-      this.topBtn();
-    },
-
-    initialize: function() {
-      this.id = {
-        target: {
-          quick: '#quick',
-          stickyTop: '#footer'
-        },
-        topBtnClass: 'btn_top'
-      };
-      this.init();
-    },
-
-    quickMenuFn: function() {
-      var quick = $(this.id.target.quick);
-      var qTop = parseInt(quick.css('top'));
-
-      $(window).scroll(function() {
-        var winTop = $(window).scrollTop();
-
-        quick.stop().animate({
-          top: winTop + qTop
-        }, 400);
-
-      })
-    },
-
-    topBtn: function() {
-      var btnLocation = $('.' + this.id.topBtnClass);
-      var timerId = 0;
-
-      $(window).on('scroll', function() {
-        var winTop = $(window).scrollTop();
-        if (winTop > 200) {
-          btnLocation.fadeIn();
-          clearInterval(timerId);
-          timerId = setInterval(btnEffet, 2000);
-        } else {
-          btnLocation.fadeOut();
-          clearInterval(timerId);
-        }
-
-      });
-
-      function btnEffet() {
-        btnLocation.fadeTo('300', 0.3).fadeTo('300', 1);
-      }
-
-      this.scrollTop(btnLocation);
-    },
-
-    scrollTop: function(eTarget, speed) {
-      var speed = speed || null;
-      eTarget.on('click', function() {
-        $('html, body').animate({
-          scrollTop: $("body").offset().top
-        }, speed)
-      })
-    }
-
-  };
-
-  $(function() {
-    UI.initialize();
-  })
-
-})
-
+$(document).ready(function(){
+           $("#testbanner").scrollFollow({
+               speed : 800,    // 움직이는 속도
+               offset : 200     // 웹페이지 상단에서 부터의 거리
+           });
+       });
 
 </script>
 
 <body>
-    <div id="quick">스크롤 퀵 메뉴</div>
-
+  <div id="testbanner">
+          배너 테스트</br>
+    </div>
 
 
       <div class="navbar-wrapper">
@@ -198,16 +131,6 @@ $(function() {
 
 
     <footer>
-      <p>
-             <a  href="login.php">
-             관리자모드
-           </a>
-           &nbsp;&nbsp;&nbsp;
-           <a href="index.php">
-            홈페이지
-           </a>
-
-           </p>
       <p>&copy; 대표:건어물 | 사업자등록번호 : 123-45-67890
       </p>
       <p>
@@ -219,17 +142,11 @@ $(function() {
     </div>
 
   </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
     <ul class="nav nav-pills nav-justified">
-        <li role="presentation"><a href="login.php">관리자모드</a></li>
+        <li role="presentation"><a href="#">관리자모드</a></li>
     </ul>
 
 
-=======
->>>>>>> 4a4725beac864590a86c14c719409c8a4a9e1f42
-=======
->>>>>>> 4a4725beac864590a86c14c719409c8a4a9e1f42
 
 
 
