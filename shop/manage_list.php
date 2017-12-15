@@ -113,8 +113,9 @@ body { padding-bottom: 70px; }
           <button type="submit" class="btn btn-secondary btn-sm" >상품수정</button>
         </form>
 
-        //아직 미구현
+        //
         <form method="get" action="delete_goods.php">
+          <input type ="hidden" name="product_id" value="<?=$row['product_id']?>">
          <button type="submit" class="btn btn-secondary btn-sm">상품삭제
          </button>
        </form>
