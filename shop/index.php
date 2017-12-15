@@ -143,7 +143,7 @@ $(document).ready(function(){
 
   </div>
     <ul class="nav nav-pills nav-justified">
-        <li role="presentation"><a href="#">관리자모드</a></li>
+        <li role="presentation"><a href="login.php">관리자모드</a></li>
     </ul>
 
 
