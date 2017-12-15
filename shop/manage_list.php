@@ -3,6 +3,18 @@
 include('lock.php');
 include("config_getdata.php");
 
+//조건문에 박을 쿼리문
+
+
+$result_count=mysqli_query($bd,"SELECT count(*) FROM gunfish");
+$result_row=mysqli_fetch_row($result_count);
+$total_row = $result_row[0];
+$no = $total_row;
+
+$query = "SELECT * FROM gunfish WHERE product_id ='$no'";
+//no - 1 씩할ㄱ것
+$result = mysqli_query($bd, $query);
+
 ?>
 
 <!DOCTYPE html>
@@ -63,24 +75,45 @@ body { padding-bottom: 70px; }
    <hr width="800">
    <!-- 상품분류 선택이미지,페이지 누르면 링크로 redirect되게해야함 -->
    <dl>
-    <div class="container">
 
-     <div class="row" >
+
+
+    <div class="container">
+      <?php
+      while($row=mysqli_fetch_array($result))
+      {
+        ?>
+
+<!--     <td height=20 bgcolor=white align=center>
+        <a href="read.php?id=<?=$row[id]?>&no=<?=$no?>">
+        <?=$row[id]?></a>
+      </td> -->
+
+
+      <div class="row" >
        <div class="col-lg-2" >
-         <img src="img/squid.jpg" alt="Generic placeholder image" width="180" height="140">
-         <strong>상품명</strong> 건조오징어
-         <br>
-         <strong>가격</strong> 만원
-         <form method="post" action="manage_goods.php">
-          <button type="submit" class="btn btn-secondary btn-sm" >상품수정</button>
-        </form>
-        <form method="post" action="delete_goods.php">
-         <button type="submit" class="btn btn-secondary btn-sm">상품삭제
-         </button>
-       </form>
-       <!-- 우리가 원하는 모양으로 나타내주는 코드를 그냥 php내부에서 html로 만들어줘야할듯 -->
+        <img src="<?=$row['product_image']?>" alt="Generic placeholder image" width="180" height="140">
+       <!--  <a href="read.php?id=<?=$row['product_id']?>&no=<?=$no?>">
+          <?=$row['product_id']?></a> -->
+          <strong>상품명 :</strong> <?=$row['product_name']?>
+          <br>
+          <strong>가격 :</strong> <?=$row['product_name']?> 원
+
+          <form method="post" action="manage_edit_goods.php">
+            <button type="submit" class="btn btn-secondary btn-sm" >상품수정</button>
+          </form>
+          <form method="post" action="delete_goods.php">
+           <button type="submit" class="btn btn-secondary btn-sm">상품삭제
+           </button>
+         </form>
+         <!-- 우리가 원하는 모양으로 나타내주는 코드를 그냥 php내부에서 html로 만들어줘야할듯 -->
+       </div>
      </div>
-   </div>
+
+     <?php
+     $no = $no - 1;
+   }
+   ?>
 
    <br />
  </dl>
