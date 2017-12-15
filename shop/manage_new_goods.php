@@ -86,7 +86,7 @@ $total_row = $result_row[0] + 1;
 
                          -->
                         <!-- 리셋시 원래 서버에 저장되어있는거 업로드 -->
-                        <input type="button" value="상품 목록으로... " class="pull-left" onclick=""/>
+                        <input type="button" value="상품 목록으로... " class="pull-left" onclick="history.back(-1)"/>
                     <!-- <a class="btn btn-default" onclick="sendData()"> 등록 </a>
                     <a class="btn btn-default" type="reset"> reset </a>
                     <a class="btn btn-default" onclick="javascript:location.href='list.jsp'">글 목록으로...</a> -->

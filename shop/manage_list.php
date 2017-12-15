@@ -97,12 +97,15 @@ body { padding-bottom: 70px; }
           <?=$row['product_id']?></a> -->
           <strong>상품명 :</strong> <?=$row['product_name']?>
           <br>
-          <strong>가격 :</strong> <?=$row['product_name']?> 원
+          <strong>가격 :</strong> <?=$row['product_price']?> 원
 
-          <form method="post" action="manage_edit_goods.php">
+
+          <form method="get" action="manage_edit_goods.php?product_id=2<?=$row['product_id']?>">
             <button type="submit" class="btn btn-secondary btn-sm" >상품수정</button>
           </form>
-          <form method="post" action="delete_goods.php">
+
+          //아직 미구현
+          <form method="get" action="delete_goods.php">
            <button type="submit" class="btn btn-secondary btn-sm">상품삭제
            </button>
          </form>
