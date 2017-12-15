@@ -1,15 +1,15 @@
 <?php
 
-error_reporting(E_ALL);
-ini_set("display_errors", 1);
+// error_reporting(E_ALL);
+// ini_set("display_errors", 1);
 
     include("config_settings.php");  //DB연결을 위한 config.php를 로딩합니다.
     session_start();   //세션의 시작
 
     if($_SERVER["REQUEST_METHOD"] == "POST"){
 
-    $myusername=addslashes($_POST['username']);
-    $mypassword=addslashes($_POST['password']);
+    $myusername=addslashes($_POST['id']);
+    $mypassword=addslashes($_POST['pw']);
 
     $sql="SELECT id FROM marryme WHERE id='$myusername' and pw='$mypassword'";
 
@@ -37,7 +37,7 @@ ini_set("display_errors", 1);
         header("location: login-err.php");
         // echo ("<meta http-equiv='Refresh' content='5;
         //  URL=login.php'>");//read.php?id=$id
-        exit;
+        // exit;
        // header("location: 2.php");  // welcome.php
     }
 }
@@ -69,9 +69,9 @@ ini_set("display_errors", 1);
       <form class="form-signin" action="" method="POST">
         <h2 class="form-signin-heading">관리자 인증</h2>
         <label for="inputId" class="sr-only">ID</label>
-        <input type="text" id="inputId" class="form-control" placeholder="ID" required autofocus>
+        <input type="text" id="inputId" class="form-control" placeholder="ID" required autofocus name="id">
         <label for="inputPassword" class="sr-only">PASSWORD</label>
-        <input type="password" id="inputPassword" class="form-control" placeholder="PASSWORD" required>
+        <input type="password" id="inputPassword" class="form-control" placeholder="PASSWORD" required name="pw">
         <button class="btn btn-lg btn-primary" type="submit">완료</button>
       </form>
 
