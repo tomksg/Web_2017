@@ -94,32 +94,41 @@ body { padding-bottom: 70px; }
        <div class="col-lg-2" >
         <img src="<?=$row['product_image']?>" alt="Generic placeholder image" width="180" height="140">
        <!--  <a href="read.php?id=<?=$row['product_id']?>&no=<?=$no?>">
-          <?=$row['product_id']?></a> -->
-          <strong>상품명 :</strong> <?=$row['product_name']?>
-          <br>
-          <strong>가격 :</strong> <?=$row['product_price']?> 원
+        <?=$row['product_id']?></a> -->
+        <strong>상품명 :</strong> <?=$row['product_name']?>
+        <br>
+        <strong>가격 :</strong> <?=$row['product_price']?> 원
 
 
-          <form method="get" action="manage_edit_goods.php?product_id=2<?=$row['product_id']?>">
-            <button type="submit" class="btn btn-secondary btn-sm" >상품수정</button>
-          </form>
+        <form method="get" action="manage_edit_goods.php">
 
-          //아직 미구현
-          <form method="get" action="delete_goods.php">
-           <button type="submit" class="btn btn-secondary btn-sm">상품삭제
-           </button>
-         </form>
-         <!-- 우리가 원하는 모양으로 나타내주는 코드를 그냥 php내부에서 html로 만들어줘야할듯 -->
-       </div>
+          <!--  -->
+          <input type ="hidden" name="product_id" value="<?=$row['product_id']?>">
+        <!--   <input type="hidden" name="product_id" value="<?=$total_row?>"> -->
+          <!--  -->
+
+
+
+
+          <button type="submit" class="btn btn-secondary btn-sm" >상품수정</button>
+        </form>
+
+        //아직 미구현
+        <form method="get" action="delete_goods.php">
+         <button type="submit" class="btn btn-secondary btn-sm">상품삭제
+         </button>
+       </form>
+       <!-- 우리가 원하는 모양으로 나타내주는 코드를 그냥 php내부에서 html로 만들어줘야할듯 -->
      </div>
+   </div>
 
-     <?php
-     $no = $no - 1;
-   }
-   ?>
+   <?php
+   $no = $no - 1;
+ }
+ ?>
 
-   <br />
- </dl>
+ <br />
+</dl>
 
 </div>
 </div>

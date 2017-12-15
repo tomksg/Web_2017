@@ -109,15 +109,17 @@ move_uploaded_file($tmp_name,$filename);
 // 전부다 확인절차 끝 - 이상없음
 // upload 시작
 
-$query = "INSERT INTO gunfish (product_id, product_name, product_image, product_price, product_info, product_from, product_weight, product_intro)
-VALUES ('$product_id', '$product_name', '$filename' , '$product_price','$product_info','$product_from','$product_weight','$product_intro')";
+// $query = "INSERT INTO gunfish (product_id, product_name, product_image, product_price, product_info, product_from, product_weight, product_intro)
+// VALUES ('$product_id', '$product_name', '$filename' , '$product_price','$product_info','$product_from','$product_weight','$product_intro')";
+
+ $query = "UPDATE gunfish SET product_name='$product_name',product_price='$product_price',product_info='$product_info',product_from='$product_from',product_weight='$product_weight', product_image='$filename' , product_intro='$product_intro' WHERE product_id='$product_id'";
 
 if ($bd->query($query) === TRUE) {
-    echo "New record created successfully";
+    echo "New record updated successfully";
     echo ("<meta http-equiv='Refresh' content='1;
        URL=manage_list.php'>");
 } else {
-    echo "Error: " . $sql . "<br>" . $bd->error;
+    echo "Error: " . $query . "<br>" . $bd->error;
 }
 
 $bd->close();

@@ -14,7 +14,7 @@ $product_id = $_GET['product_id'];
 
 $result = mysqli_query($bd,"SELECT * FROM gunfish WHERE product_id='$product_id'");
 
-$row=mysqli_fetch_row($result);
+$row=mysqli_fetch_array($result);
 
 ?>
 
@@ -42,7 +42,7 @@ $row=mysqli_fetch_row($result);
             <caption> 글쓰기 </caption>
         </thead>
         <tbody>
-            <form action="product_upload.php" method="post" encType="multipart/form-data">
+            <form action="product_update.php" method="post" encType="multipart/form-data">
 
                 <input type="hidden" name="product_id" value="<?=$product_id?>">
 
