@@ -31,13 +31,13 @@ include("config_getdata.php");
        <div class="row" >
          <div class="col-lg-3">
            <a href="manage_main.php">
-           <img src="img/img_01.png" alt="move to manage_main" width="220" height="180">
+           <img src="img/img_01.png" alt="move to manage_main" width="300" height="230">
          </a>
          </div>
 
          <div class="col-lg-1">
            <a href="manage_list.php">
-         <img src="img/img_02.png" alt="move to manage_list" width="220" height="180">
+         <img src="img/img_02.png" alt="move to manage_list" width="300" height="230">
        </a>
          </div>
        </div>
