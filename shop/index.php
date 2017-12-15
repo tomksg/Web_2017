@@ -10,13 +10,40 @@
     <link rel="stylesheet" href="css/box_design.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="C:\Users\user\Desktop\jquery-scroll-follow\lib/jquery.scrollfollow.js"></script>
+
+<style>
+#testbanner{
+        position: absolute;
+        border: 3px solid black;
+
+        left : 1150px;
+        top : 30px;
+        width: 150px;
+        height: 300px;
+    }
+
+
+
+</style>
 </head>
+<script type="text/javascript">
+$(document).ready(function(){
+           $("#testbanner").scrollFollow({
+               speed : 800,    // 움직이는 속도
+               offset : 200     // 웹페이지 상단에서 부터의 거리
+           });
+       });
+
+</script>
+
 <body>
+  <div id="testbanner">
+          배너 테스트</br>
+    </div>
+
 
       <div class="navbar-wrapper">
-        <div class="container">
-
-          <nav class="navbar navbar-static-top">
             <div class="container">
               <div class="navbar-header">
                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
@@ -24,8 +51,8 @@
                   <span class="icon-bar justified"></span>
                   <span class="icon-bar"></span>
                   <span class="icon-bar"></span>
+                  </div>
                 </button>
-        </div>
               <form class="navbar-form navbar-right" role="search">
                    <div class="form-group">
                      <input type="text" class="form-control" placeholder="Search">
@@ -33,17 +60,14 @@
                    <button type="submit" class="btn btn-default" onclick="javascript:location.href='localhost/shop/list.php'">Submit</button>
                  </form>
             </div>
-          </nav>
-        </div>
+
       </div>
-  <div class="bs-example" data-example-id="embedded-scrollspy">
-  <div class="collapse navbar-collapse bs-example-js-navbar-scrollspy">
-    <ul id="ex1" class="nav nav-pills nav-justified">
-    <li id="info" role="presentation" class="active"><a href="#0">소개</a></li>
-      <li id="list" role="presentation"><a href="#1">상품목록</a></li>
-      <li id="lo" role="presentation"><a href="#2">오시는 길</a></li>
+      <ul class="nav nav-pills nav-justified">
+    <li role="presentation" class="js-scroll-trigger"><a href="#introduction">소개</a></li>
+      <li role="presentation" class="js-scroll-trigger"><a  href="#list">상품목록</a></li>
+      <li role="presentation" class="js-scroll-trigger"><a href="#location">오시는 길</a></li>
     </ul>
-  </div>
+
 
     <style>
     body { padding-bottom: 70px; }
@@ -52,13 +76,8 @@
     <span class="vertical">
     건어물집 소개
     </span>
-    <!-- php업데이트가 느려서 업데이트된건지 확인하려고 넣어둔 현재시간출력함수 -->
-    <?php
-    $today=date("Y-m-d H:i:s");
-    echo $today ?>
   </div>
-      <div data-spy="scroll" data-target="ex1" data-offset="0" class="scrollspy-example">
-    <div id="info" class="jumbotron">
+    <section id="introduction" class="jumbotron">
        <div class="container">
      <div class="row featurette">
             <div class="col-md-7 col-md-push-5">
@@ -70,43 +89,34 @@
             </div>
           </div>
     </div>
-    </div>
+    </section>
       <hr class="featurette-divider">
 
-    <div id="list" class="container">
+    <section id="list" class="container">
     <div class="row">
           <div class="col-lg-3">
-            <a href="list.php?category=1" class="thumbnail">
+            <a href="<?php
+            echo "list.php?id=";
+            $temp = 2;
+            echo $temp;
+            ?>" class="thumbnail">
             <img src="img/squid.jpg" alt="..."></a>
+<!-- 여기서 디비에서 값이랑 아이디 가져오는거 추가하고 가져오면서 img 소스에 들어갈  -->
+<!-- php 변수를 위에서 미리 정의해주자  -->
          </div>
-         <div class="col-lg-3">
-           <a href="list.php?category=2" class="thumbnail">
-           <img src="img/squid.jpg" alt="..."></a>
-        </div>
-        <div class="col-lg-3">
-          <a href="list.php?category=3" class="thumbnail">
+          <div class="col-lg-3">
+            <a href="#" class="thumbnail">
           <img src="img/squid.jpg" alt="..."></a>
-       </div>
-     </div>
-     <div class="row">
-       <div class="col-lg-3">
-         <a href="list.php?category=4" class="thumbnail">
-         <img src="img/squid.jpg" alt="..."></a>
-      </div>
-      <div class="col-lg-3">
-        <a href="list.php?category=5" class="thumbnail">
-        <img src="img/squid.jpg" alt="..."></a>
-     </div>
-     <div class="col-lg-3">
-       <a href="list.php?category=6" class="thumbnail">
-       <img src="img/squid.jpg" alt="..."></a>
-    </div>
+           </div>
+          <div class="col-lg-3">
+            <a href="#" class="thumbnail">
+          <img src="img/squid.jpg" alt="..."></a>
+          </div>
+        </div>
+        </section>
 
-</div>
-
-    </div>
      <hr class="featurette-divider">
-     <div id="lo" class="container">
+     <section id="location" class="container">
     <div class="row featurette">
           <div class="col-md-7 col-md-push-5">
             <h2 class="featurette-heading">Oh yeah, it's that good. <span class="text-muted">See for yourself.</span></h2>
@@ -116,21 +126,11 @@
             <img class="featurette-image img-responsive center-block" src="img/squid.jpg" data-src="holder.js/500x500/auto" alt="Generic placeholder image">
           </div>
         </div>
-    </div>
+    </section>
     <hr class="featurette-divider">
 
 
     <footer>
-      <p>
-        <a  href="login.php">
-        관리자모드
-      </a>
-      &nbsp;&nbsp;&nbsp;
-      <a href="index.php">
-       홈페이지
-      </a>
-
-      </p>
       <p>&copy; 대표:건어물 | 사업자등록번호 : 123-45-67890
       </p>
       <p>
@@ -142,6 +142,9 @@
     </div>
 
   </div>
+    <ul class="nav nav-pills nav-justified">
+        <li role="presentation"><a href="#">관리자모드</a></li>
+    </ul>
 
 
 
