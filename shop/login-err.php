@@ -1,5 +1,5 @@
 <?php
- 
+
 error_reporting(E_ALL);
 ini_set("display_errors", 1);
 
@@ -62,6 +62,10 @@ ini_set("display_errors", 1);
   <body>
 
     <div class="container">
+      <div class="alert alert-danger">
+        <strong>인증실패!</strong> 다시 시도하십시오.
+      </div>
+
       <form class="form-signin" action="" method="POST">
         <h2 class="form-signin-heading">관리자 인증</h2>
         <label for="inputId" class="sr-only">ID</label>
