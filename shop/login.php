@@ -33,9 +33,9 @@ include("config_settings.php");
       }
       else
       {
-       echo "<script>alert(\"Login 실패\");</script>";
-       $error="Your Login Name or Password is invalid";
-        // header("location: login.php");
+       // echo "<script>alert(\"Login 실패\");</script>";
+       // $error="Your Login Name or Password is invalid";
+        header("location: login-err.php");
         // echo ("<meta http-equiv='Refresh' content='5;
         //  URL=login.php'>");//read.php?id=$id
         // exit;

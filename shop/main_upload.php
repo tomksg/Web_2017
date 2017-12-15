@@ -23,7 +23,7 @@ if(isset($_FILES['upload']["name"])&&(!empty($_FILES["upload"]))){
     $uploadfile = $_FILES["upload"]["name"];
 }
 
-print_r($_FILES);
+// print_r($_FILES);
 $query = "SELECT number from main WHERE number =1";
 $result = mysqli_query($bd,$query) or die ("Error Querying database.");
 $row = mysqli_fetch_assoc($result);

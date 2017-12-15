@@ -32,9 +32,9 @@ ini_set("display_errors", 1);
     }
     else
     {
-         echo "<script>alert(\"Login 실패\");</script>";
-        $error="Your Login Name or Password is invalid";
-        header("location: login2.php");
+        //  echo "<script>alert(\"Login 실패\");</script>";
+        // $error="Your Login Name or Password is invalid";
+        header("location: login-err.php");
         // echo ("<meta http-equiv='Refresh' content='5;
         //  URL=login.php'>");//read.php?id=$id
         exit;
