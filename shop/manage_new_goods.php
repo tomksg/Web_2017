@@ -4,8 +4,8 @@ include('lock.php');
 include("config_getdata.php");
 
 // 총 게시물 수 를 구한다.
-$result_count=mysql_query("SELECT count(*) FROM gunfish",$bd);
-$result_row=mysql_fetch_row($result_count);
+$result_count=mysqli_query($bd,"SELECT count(*) FROM gunfish");
+$result_row=mysqli_fetch_row($result_count);
 $total_row = $result_row[0] + 1;
 //결과의 첫번째 열이 count(*) 의 결과다.
 //mysql_fetch_row 쓰면 $result_row[0] 처럼 숫자를 써서 접근을 해야한다.
@@ -35,7 +35,7 @@ $total_row = $result_row[0] + 1;
             <caption> 글쓰기 </caption>
         </thead>
         <tbody>
-            <form action="" method="post" encType="multipart/form-data">
+            <form action="product_upload.php" method="post" encType="multipart/form-data">
 
                 <input type="hidden" name="product_id" value="<?=$total_row?>">
 
@@ -47,12 +47,12 @@ $total_row = $result_row[0] + 1;
                 <tr>
                     <th>상품이미지 </th>
                     <!--  서버에있는 이미지파일 가져오고 새거 서버에첨부가능하게 -->
-                    <td><input type="file" placeholder="" name="product_image" class="form-control"/></td>
+                    <td><input type="file" name="product_image"/></td>
                 </tr>
             <!-- 밑의 각 inputform이랑 텍스트파일에 서버에있는 파일에서
                 원래저장되있는 정보 긁어와야함 -->
                 <tr>
-                    <th>가격</th>
+                    <th>가격(원)</th>
                     <td><input type="text"  name="product_price"   value = "" class="form-control"/></td>
                 </tr>
                 <tr>
@@ -65,14 +65,21 @@ $total_row = $result_row[0] + 1;
                     <td><input type="text"  name="product_from"   value = "" class="form-control"/></td>
                 </tr>
                 <tr>
-                    <th>중량</th>
-                    <td><input type="text"  name="product_wegiht"   value = "" class="form-control"/></td>
+                    <th>중량(kg)</th>
+                    <td><input type="text"  name="product_weight"   value = "" class="form-control"/></td>
                 </tr>
                 <tr>
                     <th>소개</th>
-                    <td><textarea cols="10"  name="product_description" class="form-control">건조오징어가 몸에 정말 좋음</textarea></td>
+                    <td><textarea cols="10"  name="product_intro" class="form-control">건조오징어가 몸에 정말 좋음</textarea></td>
                 </tr>
                 <tr>
+
+
+
+
+
+
+
                     <td colspan="2">
                         <input type="submit" value="저장" onclick="" class="pull-right"/>
                         <!-- <input type="button" value="reset" class="pull-left"/>

@@ -46,7 +46,7 @@ $filename =  $path.date("YmdHis").".jpg";
 
 
 if(move_uploaded_file($tmp_name,$filename)){
-  echo $filename;
+  // echo $filename;
   // echo $id;
   // echo $tmp_name;
   // echo $id;
@@ -57,11 +57,11 @@ if(move_uploaded_file($tmp_name,$filename)){
   // echo $content1;
   // upload 는 -> name 으로 지정되어있다. upload php 로 sumbit 기능으로 받을 파일
    // tmp_name 은 이 파일의 temp 이름으로 다시 지정
- echo "1. file name : {$_FILES['upload']['name']}<br />";
- echo "4. temporary file name : {$_FILES['upload']['tmp_name']}<br />";
+ // echo "1. file name : {$_FILES['upload']['name']}<br />";
+ // echo "4. temporary file name : {$_FILES['upload']['tmp_name']}<br />";
 
- echo "파일이 업로드 되었습니다.<br />";
- echo "<img src ={$_FILES['upload']['name']}> <p>";
+ // echo "파일이 업로드 되었습니다.<br />";
+ // echo "<img src ={$_FILES['upload']['name']}> <p>";
 
 
   $query = "UPDATE main SET image='$filename' , description='$content1' WHERE number='$id'";//업데이트 쿼리문
