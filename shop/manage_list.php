@@ -86,7 +86,7 @@ body { padding-bottom: 70px; }
 // 테스트용
         // $result2 = mysqli_query($bd, "SELECT * FROM gunfish WHERE product_id ='$no'");
 // test
-      $query = "SELECT * FROM gunfish";
+      $query = "SELECT * FROM gunfish ORDER BY product_id DESC";
       $result = mysqli_query($bd, $query);
 
       // $row = mysqli_fetch_array($result);
