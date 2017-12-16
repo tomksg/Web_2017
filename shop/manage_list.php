@@ -81,21 +81,22 @@ body { padding-bottom: 70px; }
 
 
 
-      $no = $total_row;
+      // $no = $total_row;
 
 // 테스트용
         // $result2 = mysqli_query($bd, "SELECT * FROM gunfish WHERE product_id ='$no'");
 // test
-
-// while($row=mysqli_fetch_array($result))
-      while(!($no==0))
-      {
-
-      $query = "SELECT * FROM gunfish WHERE product_id ='$no'";
-//
+      $query = "SELECT * FROM gunfish";
       $result = mysqli_query($bd, $query);
 
-        $row = mysqli_fetch_array($result);
+      // $row = mysqli_fetch_array($result);
+// while($row=mysqli_fetch_array($result))
+      while($row=mysqli_fetch_array($result))
+      {
+
+
+//
+
 
         // $row2 = mysqli_fetch_array($result2);
 
@@ -134,7 +135,7 @@ body { padding-bottom: 70px; }
     </div>
 
     <?php
-    $no = $no - 1;
+    // $no = $no - 1;
   }
   mysqli_close($bd);
   ?>
