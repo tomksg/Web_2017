@@ -11,9 +11,7 @@ $result_row=mysqli_fetch_row($result_count);
 $total_row = $result_row[0];
 $no = $total_row;
 
-$query = "SELECT * FROM gunfish WHERE product_id ='$no'";
-//no - 1 씩할ㄱ것
-$result = mysqli_query($bd, $query);
+
 
 ?>
 
@@ -80,19 +78,31 @@ body { padding-bottom: 70px; }
 
     <div class="container">
       <?php
-      while($row=mysqli_fetch_array($result))
+
+
+
+      $no = $total_row;
+
+// 테스트용
+        // $result2 = mysqli_query($bd, "SELECT * FROM gunfish WHERE product_id ='$no'");
+// test
+
+// while($row=mysqli_fetch_array($result))
+      while(!($no==0))
       {
+
+      $query = "SELECT * FROM gunfish WHERE product_id ='$no'";
+//
+      $result = mysqli_query($bd, $query);
+
+        $row = mysqli_fetch_array($result);
+
+        // $row2 = mysqli_fetch_array($result2);
+
         ?>
-
-<!--     <td height=20 bgcolor=white align=center>
-        <a href="read.php?id=<?=$row[id]?>&no=<?=$no?>">
-        <?=$row[id]?></a>
-      </td> -->
-
-
-      <div class="row" >
-       <div class="col-lg-2" >
-        <img src="<?=$row['product_image']?>" alt="Generic placeholder image" width="180" height="140">
+        <div class="row" >
+         <div class="col-lg-2" >
+          <img src="<?=$row['product_image']?>" alt="Generic placeholder image" width="180" height="140">
        <!--  <a href="read.php?id=<?=$row['product_id']?>&no=<?=$no?>">
         <?=$row['product_id']?></a> -->
         <strong>상품명 :</strong> <?=$row['product_name']?>
@@ -104,7 +114,7 @@ body { padding-bottom: 70px; }
 
           <!--  -->
           <input type ="hidden" name="product_id" value="<?=$row['product_id']?>">
-        <!--   <input type="hidden" name="product_id" value="<?=$total_row?>"> -->
+          <!--   <input type="hidden" name="product_id" value="<?=$total_row?>"> -->
           <!--  -->
 
 
@@ -113,22 +123,23 @@ body { padding-bottom: 70px; }
           <button type="submit" class="btn btn-secondary btn-sm" >상품수정</button>
         </form>
 
-        //
         <form method="get" action="delete_goods.php">
           <input type ="hidden" name="product_id" value="<?=$row['product_id']?>">
-         <button type="submit" class="btn btn-secondary btn-sm">상품삭제
-         </button>
-       </form>
-       <!-- 우리가 원하는 모양으로 나타내주는 코드를 그냥 php내부에서 html로 만들어줘야할듯 -->
-     </div>
-   </div>
+          <!-- hidden 처리해놓을것 -->
+          <button type="submit" class="btn btn-secondary btn-sm">상품삭제
+          </button>
+        </form>
+        <!-- 우리가 원하는 모양으로 나타내주는 코드를 그냥 php내부에서 html로 만들어줘야할듯 -->
+      </div>
+    </div>
 
-   <?php
-   $no = $no - 1;
- }
- ?>
+    <?php
+    $no = $no - 1;
+  }
+  mysqli_close($bd);
+  ?>
 
- <br />
+  <br />
 </dl>
 
 </div>
