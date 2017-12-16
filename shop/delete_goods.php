@@ -76,7 +76,7 @@ $query = "DELETE FROM gunfish WHERE product_id='$current_row'";
 // mysqli_query($bd,$query);
 
 if ($bd->query($query) === TRUE) {
-    echo "record deleted  successfully";
+    echo "record deleted successfully";
     echo ("<meta http-equiv='Refresh' content='1;
        URL=manage_list.php'>");
 } else {

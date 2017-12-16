@@ -4,9 +4,17 @@ include('lock.php');
 include("config_getdata.php");
 
 // 총 게시물 수 를 구한다.
-$result_count=mysqli_query($bd,"SELECT count(*) FROM gunfish");
-$result_row=mysqli_fetch_array($result_count);
+$result_last=mysqli_query($bd,"SELECT * FROM gunfish order by product_id desc limit 1");
+if (!$result_last) {
+    printf("Error: %s\n", mysqli_error($bd));
+    exit();
+}
+// echo "<br><br><br><br><br><br><br><br>";
+// echo $result_last;
+$result_row=mysqli_fetch_array($result_last);
 $total_row = $result_row[0] + 1;
+//총 결과들의 숫자 내가 여기서 쓸것은 이 맨 마지막 결과값을 사용할것
+
 //결과의 첫번째 열이 count(*) 의 결과다.
 //mysql_fetch_row 쓰면 $result_row[0] 처럼 숫자를 써서 접근을 해야한다.
 ?>
@@ -37,7 +45,7 @@ $total_row = $result_row[0] + 1;
         <tbody>
             <form action="product_upload.php" method="post" encType="multipart/form-data">
 
-                <input type="text" name="product_id" value="<?=$total_row?>">
+                <input type="hidden" name="product_id" value="<?=$total_row?>">
 <!-- hidden으로 바꾸어놓을것  -->
 
                 <tr>
