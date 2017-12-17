@@ -28,3 +28,9 @@ font-family: title_font;
 span.vertical{
 font-size: 40px; background-color: #ffffff; padding: 0 10px;
 }
+
+#colored_line
+{
+  background-color:red;
+  /* 선하나만 색 진하게하려고하는데 왜안돼지 (보류) */
+}

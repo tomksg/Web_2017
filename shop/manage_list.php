@@ -58,9 +58,12 @@ $no = $total_row;
  </div>
 
  <ul class="nav nav-pills nav-justified">
-  <li role="presentation" class="active"><a href="#">소개</a></li>
-  <li role="presentation"><a href="#">상품목록</a></li>
-  <li role="presentation"><a href="#">오시는 길</a></li>
+   <li role="presentation"><a href="list.php?categrory=1">반건조생선</a></li>
+     <li role="presentation"><a href="list.php?categrory=2">건어물</a></li>
+     <li role="presentation"><a href="list.php?categrory=3">젓갈</a></li>
+     <li role="presentation"><a href="list.php?categrory=4">선물세트</a></li>
+       <li role="presentation"><a href="list.php?categrory=5">오징어</a></li>
+       <li role="presentation"><a href="list.php?categrory=6">제수용</a></li>
 </ul>
 <style>
 body { padding-bottom: 70px; }

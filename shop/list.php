@@ -1,3 +1,14 @@
+
+<?php
+
+include('lock.php');
+include("config_getdata.php");
+
+// category값 01~06에 따라 다른 목록 업로드
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="kor">
 <head>
@@ -43,11 +54,12 @@ $category=$_GET[category];
   </div>
 
 <ul class="nav nav-pills nav-justified">
-<li role="presentation" class="active"><a href="#">분류1</a></li>
-  <li role="presentation"><a href="#">분류2</a></li>
-  <li role="presentation"><a href="#">분류3</a></li>
-    <li role="presentation"><a href="#">분류4</a></li>
-      <li role="presentation"><a href="#">분류5</a></li>
+  <li role="presentation"><a href="list.php?categrory=1">반건조생선</a></li>
+    <li role="presentation"><a href="list.php?categrory=2">건어물</a></li>
+    <li role="presentation"><a href="list.php?categrory=3">젓갈</a></li>
+    <li role="presentation"><a href="list.php?categrory=4">선물세트</a></li>
+      <li role="presentation"><a href="list.php?categrory=5">오징어</a></li>
+      <li role="presentation"><a href="list.php?categrory=6">제수용</a></li>
 </ul>
 <style>
 body { padding-bottom: 70px; }
@@ -55,9 +67,6 @@ body { padding-bottom: 70px; }
 
    <div class="container">
    <h2>분류</h2>
-   <?php
-       $today=date("Y-m-d H:i:s");
-       echo $today ?>
   <hr width="800">
   <!-- 상품분류 선택이미지,페이지 누르면 링크로 redirect되게해야함 -->
       <dl>
