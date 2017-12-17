@@ -69,17 +69,17 @@ body { padding-bottom: 70px; }
 <div class="jumbotron">
  <div class="container">
    <h2>분류</h2>
-
-   <hr width="800">
+   <form method="get" action="manage_new_goods.php">
+     <input type ="hidden" >
+     <!-- hidden 처리해놓을것 -->
+     <button type="submit" class="btn btn-secondary btn-sm">새항목 추가
+     </button>
+   </form>
    <!-- 상품분류 선택이미지,페이지 누르면 링크로 redirect되게해야함 -->
-   <dl>
-
-
-
+   <hr id ="colored_line" class="featurette-divider">
+   <dl
     <div class="container">
       <?php
-
-
 
       // $no = $total_row;
 
@@ -112,28 +112,24 @@ body { padding-bottom: 70px; }
 
 
         <form method="get" action="manage_edit_goods.php">
-
-          <!--  -->
           <input type ="hidden" name="product_id" value="<?=$row['product_id']?>">
           <!--   <input type="hidden" name="product_id" value="<?=$total_row?>"> -->
-          <!--  -->
-
-
-
-
           <button type="submit" class="btn btn-secondary btn-sm" >상품수정</button>
         </form>
+<?
 
+ ?>
         <form method="get" action="delete_goods.php">
           <input type ="hidden" name="product_id" value="<?=$row['product_id']?>">
           <!-- hidden 처리해놓을것 -->
           <button type="submit" class="btn btn-secondary btn-sm">상품삭제
           </button>
         </form>
+
         <!-- 우리가 원하는 모양으로 나타내주는 코드를 그냥 php내부에서 html로 만들어줘야할듯 -->
       </div>
     </div>
-
+<br />
     <?php
     // $no = $no - 1;
   }
@@ -146,7 +142,7 @@ body { padding-bottom: 70px; }
 </div>
 </div>
 </div>
-<hr class="featurette-divider">
+
 
 
 </body>

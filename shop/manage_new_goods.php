@@ -78,7 +78,7 @@ $total_row = $result_row[0] + 1;
                 </tr>
                 <tr>
                     <th>소개</th>
-                    <td><textarea cols="10"  name="product_intro" class="form-control">건조오징어가 몸에 정말 좋음</textarea></td>
+                    <td><textarea cols="10"  name="product_intro" class="form-control"></textarea></td>
                 </tr>
                 <tr>
 
