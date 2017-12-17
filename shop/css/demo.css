@@ -21,27 +21,13 @@ header{
 
 header h1{
 	font: normal 32px/1.5 'Open Sans', sans-serif;
-	color: #3F71AE;
+	color: #ffffff;
 	padding-bottom: 16px;
 }
 
-header h2{
-	color: #F05283;
-}
-
-header h2 a{
-	color:inherit;
-	text-decoration: none;
-	display: inline-block;
-	border: 1px solid #F05283;
-	padding: 10px 15px;
-	border-radius: 3px;
-	font: bold 14px/1 'Open Sans', sans-serif;
-	text-transform: uppercase;
-}
 
 header h2 a:hover{
-	background-color:#F05283;
+	background-color:##ffffff;
 	transition:0.2s;
 	color:#fff;
 }
@@ -68,10 +54,6 @@ header ul a{
 	transition: 0.2s ease;
 }
 
-header ul li a.active{
-	background-color: #66B650;
-	pointer-events: none;
-}
 
 header ul li a:hover {
 	opacity: 1;

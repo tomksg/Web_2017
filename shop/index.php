@@ -192,30 +192,30 @@ body { padding-bottom: 70px; }
 <section id="list" class="container">
   <div class="row">
     <div class="col-lg-3">
-      <a href="list.php?category=1" class="thumbnail">
-        <img src="img/index_01.jpg" alt="..."></a>
+      <a href="list.php?category=1" class="">
+        <img src="img/index_01.png" alt="..."></a>
       </div>
       <div class="col-lg-3">
-        <a href="list.php?category=2" class="thumbnail">
-          <img src="img/index_02.jpg" alt="..."></a>
+        <a href="list.php?category=2" class="">
+          <img src="img/index_02.png" alt="..."></a>
         </div>
         <div class="col-lg-3">
-          <a href="list.php?category=3" class="thumbnail">
-            <img src="img/index_03.jpg" alt="..."></a>
+          <a href="list.php?category=3" class="">
+            <img src="img/index_03.png" alt="..."></a>
           </div>
       </div>
       <div class="row">
         <div class="col-lg-3">
-          <a href="list.php?category=4" class="thumbnail">
-            <img src="img/index_04.jpg" alt="..."></a>
+          <a href="list.php?category=4" class="">
+            <img src="img/index_04.png" alt="..."></a>
           </div>
           <div class="col-lg-3">
-            <a href="list.php?category=5" class="thumbnail">
-              <img src="img/index_05.jpg" alt="..."></a>
+            <a href="list.php?category=5" class="">
+              <img src="img/index_05.png" alt="..."></a>
             </div>
             <div class="col-lg-3">
-              <a href="list.php?category=6" class="thumbnail">
-                <img src="img/index_06.jpg" alt="..."></a>
+              <a href="list.php?category=6" class="">
+                <img src="img/index_06.png" alt="..."></a>
               </div>
           </div>
     </section>
@@ -277,14 +277,6 @@ body { padding-bottom: 70px; }
     					copyright (c)seafoodworld.com all rights reserved
     				</p>
 
-    				<div class="footer-icons">
-
-    					<a href="#"><i class="fa fa-facebook"></i></a>
-    					<a href="#"><i class="fa fa-twitter"></i></a>
-    					<a href="#"><i class="fa fa-linkedin"></i></a>
-    					<a href="#"><i class="fa fa-github"></i></a>
-
-    				</div>
 
     			</div>
 
