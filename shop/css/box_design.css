@@ -1,8 +1,21 @@
+@import url('http://fonts.googleapis.com/css?family=Open+Sans:400,700');
+
 dl img {
   border:solid;
   border-color:#c3c3c3;
   border-width: 0.8px;
 
+}
+.row{
+	align-items: center;
+}
+
+.lead{
+	padding:30px;
+}
+
+.container{
+	padding-top:30px;
 }
 
 #right
@@ -12,6 +25,20 @@ dl img {
 @font-face {
     font-family: 'title_font';
     src: url('tvn_medium.ttf');
+}
+
+@font-face {
+    font-family: 'kopub_medium';
+    src: url('KoPub Dotum Medium.ttf');
+}
+@font-face {
+    font-family: 'kopub_bold';
+    src: url('KoPub Dotum Bold.ttf');
+}
+
+@font-face {
+    font-family: 'kopub_light';
+    src: url('KoPub Dotum Light.ttf');
 }
 
 h2 {
@@ -29,8 +56,25 @@ span.vertical{
 font-size: 40px; background-color: #ffffff; padding: 0 10px;
 }
 
-#colored_line
-{
-  background-color:red;
-  /* 선하나만 색 진하게하려고하는데 왜안돼지 (보류) */
+
+body{
+	font-family:kopub_bold;
+
+}
+
+footer{
+  position: fixed;
+  bottom: 0;
+}
+
+
+@media (max-height:800px){
+  footer { position: static; }
+  header { padding-top:40px; }
+}
+
+#main{
+	padding: 0 140px 0 140px;
+  text-align: left;
+  align:center;
 }

@@ -24,7 +24,6 @@ $src2 = $row['description'];
   <link rel="stylesheet" href="css/bootstrap.css">
   <link rel="stylesheet" href="css/box_design.css">
   <!-- 아래네줄 푸터용 -->
-  <link rel="stylesheet" href="css/demo.css">
 	<link rel="stylesheet" href="css/footer-distributed-with-address-and-phones.css">
 
 	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
@@ -162,33 +161,34 @@ $src2 = $row['description'];
   <li role="presentation" class="js-scroll-trigger"><a href="#location">오시는 길</a></li>
 </ul>
 
+<div id="main">
 
-<style>
-body { padding-bottom: 70px; }
-</style>
 <div class="vertical">
   <span class="vertical">
     건어물집 소개
   </span>
 </div>
-<section id="introduction" class="jumbotron">
+<section id="introduction" >
  <div class="container">
    <div class="row featurette">
     <div class="col-md-7 col-md-push-5">
-      <h2 class="featurette-heading">Oh yeah, it's that good. <span class="text-muted">See for yourself.</span></h2>
       <p class="lead">
         <!-- 소개 문구 -->
         <?=$src2?>
       </p>
     </div>
     <div class="col-md-5 col-md-pull-7">
-      <img class="featurette-image img-responsive center-block" src="<?=$src?>" data-src="holder.js/500x500/auto" alt="Generic placeholder image">
+      <img class="class="lead" src="<?=$src?>" data-src="holder.js/500x500/auto" alt="Generic placeholder image">
     </div>
   </div>
 </div>
 </section>
-<hr class="featurette-divider">
 
+<div class="vertical">
+  <span class="vertical">
+    상품목록
+  </span>
+</div>
 <section id="list" class="container">
   <div class="row">
     <div class="col-lg-3">
@@ -219,8 +219,12 @@ body { padding-bottom: 70px; }
               </div>
           </div>
     </section>
+    <div class="vertical">
+      <span class="vertical">
+        찾아오시는 길
+      </span>
+    </div>
 
-    <hr class="featurette-divider">
     <section id="location" class="container">
       <div class="row featurette">
         <div class="col-md-7 col-md-push-5">
@@ -231,63 +235,26 @@ body { padding-bottom: 70px; }
         </div>
       </div>
     </section>
-    <hr class="featurette-divider">
-
-
-<!-- 푸터 완성된뒤에 다른 페이지에도 삽입해야함: goods.php,list.php -->
-    		<footer class="footer-distributed">
-
-    			<div class="footer-left">
-
-    				<h3>도소매<span>건어물집</span></h3>
-
-    				<p class="footer-links">
-    					<a href="login.php">관리자모드</a>
-    					·
-    					<a href="index.php">홈페이지</a>
-
-    				</p>
-
-    				<p class="footer-company-name">건어물집 &copy; 2017</p>
-    			</div>
-
-    			<div class="footer-center">
-
-    				<div>
-    					<i class="fa fa-map-marker"></i>
-    					<p><span>항공대학로 76,학관맞은편</span>고양시 덕양구, 한국</p>
-    				</div>
-
-    				<div>
-    					<i class="fa fa-phone"></i>
-    					<p>대표번호:02-333-3333 </p>
-    				</div>
-
-    				<div>
-    					<i class="fa fa-envelope"></i>
-    					<p><a>메일 : driedfood@naver.com</a></p>
-    				</div>
-
-    			</div>
-
-    			<div class="footer-right">
-
-    				<p class="footer-company-about">
-    					<span>사업자 등록번호 : 123-45-67890 </span>
-    					copyright (c)seafoodworld.com all rights reserved
-    				</p>
-
-
-    			</div>
-
-    		</footer>
 
   </div>
 
-</div>
 
+<footer class="footer-distributed">
+  <p class="footer-links" >
+    <a href="login.php" style="color:#C6C4C3;">관리자모드</a>
+    &nbsp;
+    <a href="index.php" style="color:#C6C4C3;">홈페이지</a>
 
+  </p>
 
+주식회사 건어물집  | 사업자등록번호 : 123-45-67890 | 대표이사 : 김건어물
+<br>
+주소 : 경기도 고양시 덕양구 항공대학로 76 | 개인정보관리책임 : 김보안 | 이메일 : driedfood@naver.com
+<br>
+고객센터 : 02-333-3333 | FAX : 02-333-3333
+<br>
+COPYRIGHT © 2017 DRIED FOOD SHOP ALL RIGHTS RESERVED
+</footer>
 
 
 
