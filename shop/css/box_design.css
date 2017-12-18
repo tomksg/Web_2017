@@ -18,6 +18,11 @@ dl img {
 	padding-top:30px;
 }
 
+#list img{
+  width :300;
+  height: 300;
+}
+
 #right
 {
     border-right: 0.7px solid #c3c3c3;

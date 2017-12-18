@@ -60,8 +60,6 @@ $category=$_GET[category];
     <li role="presentation"><a href="list.php?categrory=2">건어물</a></li>
     <li role="presentation"><a href="list.php?categrory=3">젓갈</a></li>
     <li role="presentation"><a href="list.php?categrory=4">선물세트</a></li>
-      <li role="presentation"><a href="list.php?categrory=5">오징어</a></li>
-      <li role="presentation"><a href="list.php?categrory=6">제수용</a></li>
 </ul>
    <div class="container">
    <h2>분류</h2>

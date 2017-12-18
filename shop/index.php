@@ -203,21 +203,11 @@ $src2 = $row['description'];
           <a href="list.php?category=3" class="">
             <img src="img/index_03.png" alt="..."></a>
           </div>
-      </div>
-      <div class="row">
-        <div class="col-lg-3">
-          <a href="list.php?category=4" class="">
-            <img src="img/index_04.png" alt="..."></a>
-          </div>
           <div class="col-lg-3">
-            <a href="list.php?category=5" class="">
-              <img src="img/index_05.png" alt="..."></a>
+            <a href="list.php?category=4" class="">
+              <img src="img/index_04.png" alt="..."></a>
             </div>
-            <div class="col-lg-3">
-              <a href="list.php?category=6" class="">
-                <img src="img/index_06.png" alt="..."></a>
-              </div>
-          </div>
+      </div>
     </section>
     <div class="vertical">
       <span class="vertical">
