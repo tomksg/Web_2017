@@ -161,6 +161,16 @@ $src2 = $row['description'];
   <li role="presentation" class="js-scroll-trigger"><a href="#location">오시는 길</a></li>
 </ul>
 
+<ul>
+ <li><a href="#introduction"><img src="img/nav_1.png" alt="..." class="index_image"></a></li>
+ <li><a  href="#list"><img src="img/nav_2.png" alt="..." class="index_image"></a></li>
+ <li><a href="#location"><img src="img/nav_3.png" alt="..." class="index_image"></a></li>
+</ul>
+&nbsp;
+    <!-- <img src="img/nav_1.png" alt="...">
+  <img src="img/nav_2.png" alt="...">
+    <img src="img/nav_3.png" alt="..."> -->
+
 <div id="main">
 
 <div class="vertical">
@@ -191,21 +201,21 @@ $src2 = $row['description'];
 </div>
 <section id="list" class="container">
   <div class="row">
-    <div class="col-lg-3">
-      <a href="list.php?category=1" class="">
-        <img src="img/index_01.png" alt="..."></a>
+    <div class="col">
+      <a href="list.php?category=1">
+        <img src="img/index_01.png" class="category" alt="..."></a>
       </div>
-      <div class="col-lg-3">
+      <div class="col">
         <a href="list.php?category=2" class="">
-          <img src="img/index_02.png" alt="..."></a>
+          <img src="img/index_02.png" class="category" alt="..."></a>
         </div>
-        <div class="col-lg-3">
+        <div class="col">
           <a href="list.php?category=3" class="">
-            <img src="img/index_03.png" alt="..."></a>
+            <img src="img/index_03.png" class="category" alt="..."></a>
           </div>
-          <div class="col-lg-3">
+          <div class="col">
             <a href="list.php?category=4" class="">
-              <img src="img/index_04.png" alt="..."></a>
+              <img src="img/index_04.png" class="category" alt="..."></a>
             </div>
       </div>
     </section>
@@ -217,11 +227,11 @@ $src2 = $row['description'];
 
     <section id="location" class="container">
       <div class="row featurette">
-        <div class="col-md-7 col-md-push-5">
-      <img class="featurette-image img-responsive center-block" src="img/info.png" data-src="holder.js/500x500" alt="Generic placeholder image">
+        <div class="col-md-7 col-md-push-4">
+      <img class="featurette-image img-responsive center-block map" src="img/info.png" data-src="holder.js/500x500" alt="Generic placeholder image">
         </div>
         <div class="col-md-5 col-md-pull-7">
-          <img class="featurette-image img-responsive center-block" src="img/map.png" data-src="holder.js/500x500/auto" alt="Generic placeholder image">
+          <img class="featurette-image img-responsive center-block map" src="img/map.png" data-src="holder.js/500x500/auto" alt="Generic placeholder image">
         </div>
       </div>
     </section>
@@ -236,7 +246,7 @@ $src2 = $row['description'];
     <a href="index.php" style="color:#C6C4C3;">홈페이지</a>
 
   </p>
-
+<hr />
 주식회사 건어물집  | 사업자등록번호 : 123-45-67890 | 대표이사 : 김건어물
 <br>
 주소 : 경기도 고양시 덕양구 항공대학로 76 | 개인정보관리책임 : 김보안 | 이메일 : driedfood@naver.com

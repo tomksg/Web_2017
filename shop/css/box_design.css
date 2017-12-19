@@ -18,6 +18,41 @@ dl img {
 	padding-top:30px;
 }
 
+ul {
+    list-style:none;
+    margin:0;
+    padding:0;
+}
+.index_image{
+  width: 421px;
+    height: 45px;
+}
+
+.iist_image{
+  width: 315px;
+    height: 45px;
+}
+
+.category{
+  width:250px;
+  height: auto;
+  float:left;
+}
+
+.map{
+  width:250px;
+  height: auto;
+}
+
+
+li {;
+  margin: 0 0 0 0;
+  padding: 0 0 0 0;
+  border : 0;
+  float:left;
+
+}
+
 #list img{
   width :300;
   height: 300;

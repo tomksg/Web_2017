@@ -54,13 +54,23 @@ $category=$_GET[category];
       </nav>
     </div>
   </div>
-
+<!--
 <ul class="nav nav-pills nav-justified">
   <li role="presentation"><a href="list.php?categrory=1">반건조생선</a></li>
     <li role="presentation"><a href="list.php?categrory=2">건어물</a></li>
     <li role="presentation"><a href="list.php?categrory=3">젓갈</a></li>
     <li role="presentation"><a href="list.php?categrory=4">선물세트</a></li>
+</ul> -->
+<ul>
+ <li><a href="list.php?categrory=1"><img src="img/lnav_1.png" alt="..." class="iist_image"></a></li>
+ <li><a  href="list.php?categrory=2"><img src="img/lnav_2.png" alt="..." class="iist_image"></a></li>
+ <li><a href="list.php?categrory=3"><img src="img/lnav_3.png" alt="..." class="iist_image"></a></li>
+  <li><a href="list.php?categrory=4"><img src="img/lnav_4.png" alt="..." class="iist_image"></a></li>
 </ul>
+&nbsp;
+<!-- 근데 창줄이면 깨지네 ;; -->
+<br>
+
    <div class="container">
    <h2>분류</h2>
   <hr>
@@ -161,7 +171,7 @@ $category=$_GET[category];
      <a href="index.php" style="color:#C6C4C3;">홈페이지</a>
 
    </p>
-
+<hr />
  주식회사 건어물집  | 사업자등록번호 : 123-45-67890 | 대표이사 : 김건어물
  <br>
  주소 : 경기도 고양시 덕양구 항공대학로 76 | 개인정보관리책임 : 김보안 | 이메일 : driedfood@naver.com
