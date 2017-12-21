@@ -39,78 +39,78 @@ $category=$_GET['category'];
   </ul> -->
 
 
-      <div class="banner">
-          <td align="center"><a href="index.php" ><img src="img/title.png" border="0" id="banimg" ></a></td>
+  <div class="banner">
+    <td align="center"><a href="index.php" ><img src="img/title.png" border="0" id="banimg" ></a></td>
+  </div>
+
+  <ul>
+   <li class="list_image"><a href="list.php?category=1"><img src="img/lnav_1.png" alt="..." ></a></li>
+   <li class="list_image"><a  href="list.php?category=2"><img src="img/lnav_2.png" alt="..." class=""></a></li>
+   <li class="list_image"><a href="list.php?category=3"><img src="img/lnav_3.png" alt="..." class=""></a></li>
+   <li class="list_image"><a href="list.php?category=4"><img src="img/lnav_4.png" alt="..." class=""></a></li>
+ </ul>
+ <p>
+ &nbsp;</p>
+ <div class="container">
+
+  <div class="container">
+    <div class="navbar-header">
+      <form class="navbar-form navbar-right" role="search" action="search_list.php" method="get" >
+       <div class="form-group">
+         <select name="search_category" class="form-control">
+          <option value="01">반건조생선</option>
+          <option value="02">건어물</option>
+          <option value="03">젓갈</option>
+          <option value="04">선물세트</option>
+        </select>
+        <input type="text" name="search_keyword" class="form-control" placeholder="Search">
+      </div>
+      <button type="submit" class="btn btn-default" >검색</button>
+    </form>
+  </div>
+
+</div>
+</div>
+
+&nbsp;
+<!-- 근데 창줄이면 깨지네 ;; -->
+<br>
+
+<div class="container">
+ <h2>분류</h2>
+ <hr>
+
+ <dl>
+
+
+  <div class="container">
+
+   <div class="row" >
+    <?php
+    $category=$_GET['category'];
+    $query = "SELECT * FROM gunfish WHERE category = '$category' ORDER BY product_id DESC";
+    $result = mysqli_query($bd, $query);
+    while($row=mysqli_fetch_array($result))
+    {
+      ?>
+
+
+      <div class="col-md-3" >
+        <a href="goods.php?product_id=<?=$row['product_id']?>"><img src="<?=$row['product_image']?>" alt="Generic placeholder image" width="180" height="140"></a>
+        <br>
+        <strong>상품명 :</strong> <?=$row['product_name']?>
+        <br>
+        <strong>가격 :</strong> <?=$row['product_price']?> 원
+
       </div>
 
-      <ul>
-       <li class="list_image"><a href="list.php?category=1"><img src="img/lnav_1.png" alt="..." ></a></li>
-       <li class="list_image"><a  href="list.php?category=2"><img src="img/lnav_2.png" alt="..." class=""></a></li>
-       <li class="list_image"><a href="list.php?category=3"><img src="img/lnav_3.png" alt="..." class=""></a></li>
-        <li class="list_image"><a href="list.php?category=4"><img src="img/lnav_4.png" alt="..." class=""></a></li>
-      </ul>
-<p>
- &nbsp;</p>
-          <div class="container">
-
-              <div class="container">
-                <div class="navbar-header">
-                <form class="navbar-form navbar-right" role="search" action="search_list.php" method="get" >
-                     <div class="form-group">
-                       <select name="search_category" class="form-control">
-                      <option value="01">반건조생선</option>
-                      <option value="02">건어물</option>
-                      <option value="03">젓갈</option>
-                      <option value="04">선물세트</option>
-                      </select>
-                       <input type="text" name="search_keyword" class="form-control" placeholder="Search">
-                     </div>
-                     <button type="submit" class="btn btn-default" >검색</button>
-                   </form>
-              </div>
-
-          </div>
-        </div>
-
- &nbsp;
- <!-- 근데 창줄이면 깨지네 ;; -->
- <br>
-
- <div class="container">
-   <h2>분류</h2>
-   <hr>
-
-   <dl>
-
-
-    <div class="container">
-
-     <div class="row" >
       <?php
-      $category=$_GET['category'];
-      $query = "SELECT * FROM gunfish WHERE category = '$category' ORDER BY product_id DESC";
-      $result = mysqli_query($bd, $query);
-      while($row=mysqli_fetch_array($result))
-      {
-        ?>
-
-
-        <div class="col-md-3" >
-          <a href="goods.php?product_id=<?=$row['product_id']?>"><img src="<?=$row['product_image']?>" alt="Generic placeholder image" width="180" height="140"></a>
-          <br>
-          <strong>상품명 :</strong> <?=$row['product_name']?>
-          <br>
-          <strong>가격 :</strong> <?=$row['product_price']?> 원
-
-        </div>
-
-        <?php
     // $no = $no - 1;
-      }
-      mysqli_close($bd);
-      ?>
-    </div>
+    }
+    mysqli_close($bd);
+    ?>
   </div>
+</div>
 
 
 </dl>
