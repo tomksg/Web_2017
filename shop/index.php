@@ -160,6 +160,11 @@ $src2 = $row['description'];
      </form>
    </div> -->
 
+     <div class="banner">
+       <td align="center"><a href="index.php" ><img src="img/title.png" border="0" id="banimg" ></a></td>
+     </div>
+
+
   <div class="container">
     <div class="navbar-header">
       <form class="navbar-form navbar-right" role="search" action="search_list.php" method="get" >
