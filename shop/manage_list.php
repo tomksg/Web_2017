@@ -92,7 +92,7 @@ body { padding-bottom: 70px; }
 
       // $row = mysqli_fetch_array($result);
 // while($row=mysqli_fetch_array($result))
-  ?><div class="row" >
+  ?><div class="row">
     <?  while($row=mysqli_fetch_array($result))
       {
         // $row2 = mysqli_fetch_array($result2);
