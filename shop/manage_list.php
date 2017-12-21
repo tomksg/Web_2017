@@ -71,7 +71,7 @@ $category = $_GET['category'];
    <h2>분류</h2>
    <form method="get" action="manage_new_goods.php">
 
-    <input type ="hidden" name="category" value="<?=$row['category']?>">
+    <input type ="hidden" name="category" value="<?=$category?>">
      <!-- hidden 처리해놓을것 -->
      <button type="submit" class="btn btn-secondary btn-sm">새항목 추가
      </button>
@@ -113,7 +113,7 @@ $category = $_GET['category'];
 
         <form method="get" action="manage_edit_goods.php">
           <input type ="hidden" name="product_id" value="<?=$row['product_id']?>">
-          <input type ="hidden" name="category" value="<?=$row['category']?>">
+          <input type ="hidden" name="category" value="<?=$category?>">
           <button type="submit" class="btn btn-secondary btn-sm" >상품수정</button>
         </form>
 

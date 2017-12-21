@@ -22,9 +22,7 @@ if(!$_POST['category']) {
     </script>
     ");
   exit;
-}
-
-else{
+}else{
     $category = $_POST['category'];
 }
 
