@@ -1,5 +1,5 @@
 <?php
-setcookie("what_you_saw","$product_id",time()+2400);
+// setcookie("what_you_saw","$product_id",time()+2400);
 // include('lock.php');
 include("config_getdata.php");
 
@@ -38,9 +38,11 @@ $row=mysqli_fetch_array($result);
   <link rel="stylesheet" href="css/footer-distributed-with-address-and-phones.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="cookie.js"></script>
+
 </head>
 <body>
-
+  <!-- <script type="text/javascript">set</script> -->
 
   <div class="banner">
     <td align="center"><a href="index.php" ><img src="img/title.png" border="0" id="banimg" ></a></td>
