@@ -132,7 +132,9 @@ $src2 = $row['description'];
 </script>
 
 <body>
-  <div id="quick">스크롤 퀵 메뉴</div>
+  <div id="quick"><img src="img/ad.jpg" alt="ad">
+    <button><a href="#">TOP</a></button>
+  </div>
 
 
 
