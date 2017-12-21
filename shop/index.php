@@ -133,9 +133,11 @@ $src2 = $row['description'];
 
 <body>
 
-  <div id="quick"><img src= alt=" "><br>
+  <div id="quick"><img src=img/ad2.jpg alt="ad"><br>
     <button><span class="glyphicon glyphicons-chevron-up" aria-hidden="true"></span><a href="#">
       <strong>TOP</a></button>
+        <button><span class="glyphicon glyphicons-chevron-down" aria-hidden="true"></span><a href="#">
+          <strong>DOWN</a></button>
   </div>
 
 
