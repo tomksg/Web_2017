@@ -120,6 +120,7 @@ $category = $_GET['category'];
 
         <form method="get" action="delete_goods.php">
           <input type ="hidden" name="product_id" value="<?=$row['product_id']?>">
+          <input type ="hidden" name="category" value="<?=$category?>">
           <!-- hidden 처리해놓을것 -->
           <button type="submit" class="btn btn-secondary btn-sm">상품삭제
           </button>
