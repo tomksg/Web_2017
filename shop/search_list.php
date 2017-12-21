@@ -41,9 +41,12 @@ $search_keyword=$_GET['search_keyword'];
    <li class="list_image"><a href="list.php?category=3"><img src="img/lnav_3.png" alt="..." class=""></a></li>
    <li class="list_image"><a href="list.php?category=4"><img src="img/lnav_4.png" alt="..." class=""></a></li>
  </ul>
+ <p>
  &nbsp;
+</p>
  <!-- 근데 창줄이면 깨지네 ;; -->
  <br>
+  <div class="container">
     <div class="navbar-header">
       <form class="navbar-form navbar-right" role="search" action="search_list.php" method="get" >
        <div class="form-group">
@@ -58,7 +61,7 @@ $search_keyword=$_GET['search_keyword'];
       <button type="submit" class="btn btn-default" >검색</button>
     </form>
   </div>
-
+</div>
  <div class="container">
 
    <h2>분류</h2>
@@ -73,7 +76,7 @@ $search_keyword=$_GET['search_keyword'];
        <div class="row" >
         <?php
 
-        $result = mysqli_query($bd, "SELECT * FROM gunfish WHERE product_name LIKE '%$search_keyword%'");
+        $result = mysqli_query($bd, "SELECT * FROM gunfish WHERE product_name LIKE '%$search_keyword%' AND category='$search_category'");
         // $row=mysqli_fetch_array($result);
 
         while($row=mysqli_fetch_array($result))
