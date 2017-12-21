@@ -51,10 +51,8 @@ $category=$_GET['category'];
              <li role="presentation" class="js-scroll-trigger" id="bar"><a href="img/lnav_3.png">젓갈</a></li>
              <li role="presentation" class="js-scroll-trigger" id="bar"><a href="img/lnav_4.png">선물세트</a></li>
            </ul>
- <div class="container">
 
   <div class="container">
-    <div class="navbar-header">
       <form class="navbar-form navbar-right" role="search" action="search_list.php" method="get" >
        <div class="form-group">
          <select name="search_category" class="form-control">
@@ -67,9 +65,8 @@ $category=$_GET['category'];
       </div>
       <button type="submit" class="btn btn-default" >검색</button>
     </form>
-  </div>
 
-</div>
+
 </div>
 
 &nbsp;

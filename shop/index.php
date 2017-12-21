@@ -282,7 +282,7 @@ $src2 = $row['description'];
       </p>
     </div>
     <div class="col-md-5 col-md-pull-7">
-      <img class="class="lead" src="<?=$src?>" data-src="holder.js/500x500/auto" alt="Generic placeholder image">
+      <img class="class="lead" src="<?=$src?>" data-src="img/5.jpg/700x700/auto" alt="Generic placeholder image">
     </div>
   </div>
 </div>
