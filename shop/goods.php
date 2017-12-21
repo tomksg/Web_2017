@@ -11,16 +11,16 @@ $product_id=$_GET['product_id'];
 // echo $category;
 // echo '<br>';
 
-echo '<br>';
-echo $product_id;
+// echo '<br>';
+// echo $product_id;
 
 // $query = "SELECT * FROM gunfish WHERE product_id = '$product_id'";
 $result = mysqli_query($bd, "SELECT * FROM gunfish WHERE product_id = '$product_id'");
-$row=mysqli_fetch_row($result);
+$row=mysqli_fetch_array($result);
 
-echo $row['product_id'];
-echo '<br>';
-echo $row['product_name'];
+// echo $row['product_id'];
+// echo '<br>';
+// echo $row['product_name'];
 ?>
 
 
@@ -46,10 +46,10 @@ echo $row['product_name'];
           </div>
 
          <ul>
-          <li class="list_image"><a href="list.php?categrory=1"><img src="img/lnav_1.png" alt="..." ></a></li>
-          <li class="list_image"><a  href="list.php?categrory=2"><img src="img/lnav_2.png" alt="..." class=""></a></li>
-          <li class="list_image"><a href="list.php?categrory=3"><img src="img/lnav_3.png" alt="..." class=""></a></li>
-           <li class="list_image"><a href="list.php?categrory=4"><img src="img/lnav_4.png" alt="..." class=""></a></li>
+          <li class="list_image"><a href="list.php?category=1"><img src="img/lnav_1.png" alt="..." ></a></li>
+          <li class="list_image"><a  href="list.php?category=2"><img src="img/lnav_2.png" alt="..." class=""></a></li>
+          <li class="list_image"><a href="list.php?category=3"><img src="img/lnav_3.png" alt="..." class=""></a></li>
+           <li class="list_image"><a href="list.php?category=4"><img src="img/lnav_4.png" alt="..." class=""></a></li>
          </ul>
 
 
