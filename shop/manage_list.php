@@ -79,7 +79,7 @@ body { padding-bottom: 70px; }
    <!-- 상품분류 선택이미지,페이지 누르면 링크로 redirect되게해야함 -->
    <hr id ="colored_line" class="featurette-divider">
    <dl
-    <div class="container">
+
       <?php
 
       // $no = $total_row;
@@ -94,19 +94,15 @@ body { padding-bottom: 70px; }
 // while($row=mysqli_fetch_array($result))
       while($row=mysqli_fetch_array($result))
       {
-
-
-//
-
-
         // $row2 = mysqli_fetch_array($result2);
 
         ?>
+  <div class="container">
         <div class="row" >
-         <div class="col-lg-2" >
+
+         <div class="col-md-3" >
           <img src="<?=$row['product_image']?>" alt="Generic placeholder image" width="180" height="140">
-       <!--  <a href="read.php?id=<?=$row['product_id']?>&no=<?=$no?>">
-        <?=$row['product_id']?></a> -->
+
         <strong>상품명 :</strong> <?=$row['product_name']?>
         <br>
         <strong>가격 :</strong> <?=$row['product_price']?> 원
@@ -114,7 +110,6 @@ body { padding-bottom: 70px; }
 
         <form method="get" action="manage_edit_goods.php">
           <input type ="hidden" name="product_id" value="<?=$row['product_id']?>">
-          <!--   <input type="hidden" name="product_id" value="<?=$total_row?>"> -->
           <button type="submit" class="btn btn-secondary btn-sm" >상품수정</button>
         </form>
 <?
