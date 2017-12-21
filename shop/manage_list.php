@@ -72,76 +72,77 @@ $category = $_GET['category'];
    <form method="get" action="manage_new_goods.php">
 
     <input type ="hidden" name="category" value="<?=$category?>">
-     <!-- hidden 처리해놓을것 -->
-     <button type="submit" class="btn btn-secondary btn-sm">새항목 추가
-     </button>
-   </form>
-   <!-- 상품분류 선택이미지,페이지 누르면 링크로 redirect되게해야함 -->
-   <hr id ="colored_line" class="featurette-divider">
-   <dl>
+    <!-- hidden 처리해놓을것 -->
+    <button type="submit" class="btn btn-secondary btn-sm">새항목 추가
+    </button>
+  </form>
+  <!-- 상품분류 선택이미지,페이지 누르면 링크로 redirect되게해야함 -->
+  <hr id ="colored_line" class="featurette-divider">
+  <dl>
 
 
 
-  <div class="container">
-<div class="row" >
+    <div class="container">
+      <div class="row" >
 
 
-   <?php
+       <?php
 
       // $no = $total_row;
 
 // 테스트용
         // $result2 = mysqli_query($bd, "SELECT * FROM gunfish WHERE product_id ='$no'");
 // test
-   $category=$_GET['category'];
+       $category=$_GET['category'];
 
-   $query = "SELECT * FROM gunfish WHERE category = '$category' ORDER BY product_id DESC";
-   $result = mysqli_query($bd, $query);
+       $query = "SELECT * FROM gunfish WHERE category = '$category' ORDER BY product_id DESC";
+       $result = mysqli_query($bd, $query);
 
       // $row = mysqli_fetch_array($result);
 // while($row=mysqli_fetch_array($result))
-   while($row=mysqli_fetch_array($result))
-   {
+       while($row=mysqli_fetch_array($result))
+       {
         // $row2 = mysqli_fetch_array($result2);
 
-    ?>
+        ?>
 
 
 
 
-       <div class="col-md-3" >
-        <img src="<?=$row['product_image']?>" alt="Generic placeholder image" width="180" height="140">
-
-        <strong>상품명 :</strong> <?=$row['product_name']?>
-        <br>
-        <strong>가격 :</strong> <?=$row['product_price']?> 원
-
-
-        <form method="get" action="manage_edit_goods.php">
-          <input type ="hidden" name="product_id" value="<?=$row['product_id']?>">
-          <input type ="hidden" name="category" value="<?=$category?>">
-          <button type="submit" class="btn btn-secondary btn-sm" >상품수정</button>
-        </form>
+        <div class="col-md-3" >
+          <img src="<?=$row['product_image']?>" alt="Generic placeholder image" width="180" height="140">
+          <br>
+          <strong>상품명 :</strong> <?=$row['product_name']?>
+          <br>
+          <strong>가격 :</strong> <?=$row['product_price']?> 원
 
 
-        <form method="get" action="delete_goods.php">
-          <input type ="hidden" name="product_id" value="<?=$row['product_id']?>">
-          <input type ="hidden" name="category" value="<?=$category?>">
-          <!-- hidden 처리해놓을것 -->
-          <button type="submit" class="btn btn-secondary btn-sm">상품삭제
-          </button>
-        </form>
+          <form method="get" action="manage_edit_goods.php">
+            <input type ="hidden" name="product_id" value="<?=$row['product_id']?>">
+            <input type ="hidden" name="category" value="<?=$category?>">
+            <button type="submit" class="btn btn-secondary btn-sm" >상품수정</button>
+          </form>
 
-        <!-- 우리가 원하는 모양으로 나타내주는 코드를 그냥 php내부에서 html로 만들어줘야할듯 -->
-      </div>
-    </div>
-    <br />
-    <?php
+
+          <form method="get" action="delete_goods.php">
+            <input type ="hidden" name="product_id" value="<?=$row['product_id']?>">
+            <input type ="hidden" name="category" value="<?=$category?>">
+            <!-- hidden 처리해놓을것 -->
+            <button type="submit" class="btn btn-secondary btn-sm">상품삭제
+            </button>
+          </form>
+
+          <!-- 우리가 원하는 모양으로 나타내주는 코드를 그냥 php내부에서 html로 만들어줘야할듯 -->
+        </div>
+
+        <?php
     // $no = $no - 1;
-  }
-  mysqli_close($bd);
-  ?>
-
+      }
+      mysqli_close($bd);
+      ?>
+    </div>
+  </div>
+  <br/>
   <br />
 </dl>
 

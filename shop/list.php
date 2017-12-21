@@ -77,36 +77,35 @@ $category=$_GET['category'];
    <dl>
 
 
-    <?php
-    $category=$_GET['category'];
-    $query = "SELECT * FROM gunfish WHERE category = '$category' ORDER BY product_id DESC";
-    $result = mysqli_query($bd, $query);
-    while($row=mysqli_fetch_array($result))
-    {
-      ?>
+    <div class="container">
 
-      <div class="container">
+     <div class="row" >
+      <?php
+      $category=$_GET['category'];
+      $query = "SELECT * FROM gunfish WHERE category = '$category' ORDER BY product_id DESC";
+      $result = mysqli_query($bd, $query);
+      while($row=mysqli_fetch_array($result))
+      {
+        ?>
 
-       <div class="row" >
 
-         <div class="col-md-3" >
-          <img src="<?=$row['product_image']?>" alt="Generic placeholder image" width="180" height="140">
-
+        <div class="col-md-3" >
+          <a href="goods.php?product_id=<?=$row['product_id']?>"><img src="<?=$row['product_image']?>" alt="Generic placeholder image" width="180" height="140"></a>
+          <br>
           <strong>상품명 :</strong> <?=$row['product_name']?>
           <br>
           <strong>가격 :</strong> <?=$row['product_price']?> 원
 
         </div>
-      </div>
-      <br />
-      <?php
+
+        <?php
     // $no = $no - 1;
-    }
-    mysqli_close($bd);
-    ?>
+      }
+      mysqli_close($bd);
+      ?>
+    </div>
   </div>
 
-  <br />
 
 </dl>
 
