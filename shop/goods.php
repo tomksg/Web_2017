@@ -1,5 +1,5 @@
 <?php
-
+setcookie("what_you_saw","$product_id",time()+2400);
 // include('lock.php');
 include("config_getdata.php");
 
@@ -18,7 +18,7 @@ $product_id=$_GET['product_id'];
 $result = mysqli_query($bd, "SELECT * FROM gunfish WHERE product_id = '$product_id'");
 $row=mysqli_fetch_array($result);
 
-setcookie("what_you_saw","$product_id",time()+2400);
+
 // echo $row['product_id'];
 // echo '<br>';
 // echo $row['product_name'];
