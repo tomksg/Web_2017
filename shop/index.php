@@ -134,11 +134,13 @@ $src2 = $row['description'];
 <body>
 
   <div id="quick"><br>
-    <button><span class="glyphicon glyphicons-chevron-up" aria-hidden="true"></span><a href="#">
-      <strong>page-up</a></button><br>
-        <button><span class="glyphicon glyphicons-chevron-down" aria-hidden="true"></span><a href="#location">
-          <strong>page-down</a></button>
+    <div class="btn-group-vertical" role="group">
+    <button class="btn btn-default"><span class="glyphicon glyphicon-chevron-up" aria-hidden="true"></span><a href="#">
+      <strong> TOP </a></button><br>
+        <button class="btn btn-default"><span class="glyphicon glyphicon-chevron-down" aria-hidden="true"></span><a href="#location">
+          <strong>DOWN</a></button>
   </div>
+</div>
 
 
 
@@ -238,7 +240,7 @@ $src2 = $row['description'];
         </div>
       </div>
       <div class="item">
-        <img class="third-slide" src="img/4.jpg" alt="Third slide">
+        <img class="third-slide" src="img/3.jpg" alt="Third slide">
         <div class="container">
           <div class="carousel-caption">
             <h1>One more for good measure.</h1>
