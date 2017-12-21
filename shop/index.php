@@ -164,11 +164,7 @@ $src2 = $row['description'];
 
      <div class="banner">
        <td align="center"><a href="index.php" ><img src="img/title.png" border="0" id="banimg" ></a></td>
-     </div>
-
-
-  <div class="container">
-    <div class="navbar-header">
+ <div class="container">
       <form class="navbar-form navbar-right" role="search" action="search_list.php" method="get" >
        <div class="form-group">
          <select name="search_category" class="form-control">
@@ -181,9 +177,14 @@ $src2 = $row['description'];
       </div>
       <button type="submit" class="btn btn-default" >검색</button>
     </form>
-  </div>
-
 </div>
+     </div>
+
+
+
+
+
+
 
 
 
@@ -199,7 +200,7 @@ $src2 = $row['description'];
     <img src="img/nav_3.png" alt="..."> -->
 
 
-
+<br>
 <div id="main">
 <style>
 #myCarousel img{
@@ -263,13 +264,14 @@ $src2 = $row['description'];
 
 
 
-
+<br>
 
   <div class="vertical">
   <span class="vertical">
     건어물집 소개
   </span>
 </div>
+<br>
 <section id="introduction" >
  <div class="container">
    <div class="row featurette">
@@ -285,12 +287,13 @@ $src2 = $row['description'];
   </div>
 </div>
 </section>
-
+<br>
 <div class="vertical">
   <span class="vertical">
     상품목록
   </span>
 </div>
+<br>
 <section id="list" class="container">
   <div class="row">
     <div class="col">
@@ -311,11 +314,13 @@ $src2 = $row['description'];
             </div>
       </div>
     </section>
+    <br>
     <div class="vertical">
       <span class="vertical">
         찾아오시는 길
       </span>
     </div>
+    <br>
 
     <section id="location" class="container">
       <div class="row featurette">
