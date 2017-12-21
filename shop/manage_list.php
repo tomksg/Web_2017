@@ -5,12 +5,11 @@ include("config_getdata.php");
 
 //조건문에 박을 쿼리문
 
-
-$result_count=mysqli_query($bd,"SELECT count(*) FROM gunfish");
-$result_row=mysqli_fetch_row($result_count);
-$total_row = $result_row[0];
-$no = $total_row                             ;
-
+$category = $_GET['category'];
+// $result_count=mysqli_query($bd,"SELECT count(*) FROM gunfish");
+// $result_row=mysqli_fetch_row($result_count);
+// $total_row = $result_row[0];
+// $no = $total_row;
 
 
 ?>
@@ -58,51 +57,60 @@ $no = $total_row                             ;
  </div>
 
  <ul class="nav nav-pills nav-justified">
-   <li role="presentation"><a href="list.php?categrory=1">반건조생선</a></li>
-     <li role="presentation"><a href="list.php?categrory=2">건어물</a></li>
-     <li role="presentation"><a href="list.php?categrory=3">젓갈</a></li>
-     <li role="presentation"><a href="list.php?categrory=4">선물세트</a></li>
-</ul>
-<style>
-body { padding-bottom: 70px; }
+   <li role="presentation"><a href="manage_list.php?category=1">반건조생선</a></li>
+   <li role="presentation"><a href="manage_list.php?category=2">건어물</a></li>
+   <li role="presentation"><a href="manage_list.php?category=3">젓갈</a></li>
+   <li role="presentation"><a href="manage_list.php?category=4">선물세트</a></li>
+ </ul>
+ <style>
+ body { padding-bottom: 70px; }
 </style>
 
 <div class="jumbotron">
  <div class="container">
    <h2>분류</h2>
    <form method="get" action="manage_new_goods.php">
-     <input type ="hidden" >
+
+    <input type ="hidden" name="category" value="<?=$category?>">
      <!-- hidden 처리해놓을것 -->
      <button type="submit" class="btn btn-secondary btn-sm">새항목 추가
      </button>
    </form>
    <!-- 상품분류 선택이미지,페이지 누르면 링크로 redirect되게해야함 -->
    <hr id ="colored_line" class="featurette-divider">
-   <dl
+   <dl>
 
-      <?php
+
+
+  <div class="container">
+<div class="row" >
+
+
+   <?php
 
       // $no = $total_row;
 
 // 테스트용
         // $result2 = mysqli_query($bd, "SELECT * FROM gunfish WHERE product_id ='$no'");
 // test
-      $query = "SELECT * FROM gunfish ORDER BY product_id DESC";
-      $result = mysqli_query($bd, $query);
+   $category=$_GET['category'];
+
+   $query = "SELECT * FROM gunfish WHERE category = '$category' ORDER BY product_id DESC";
+   $result = mysqli_query($bd, $query);
 
       // $row = mysqli_fetch_array($result);
 // while($row=mysqli_fetch_array($result))
-  ?><div class="row">
-    <?  while($row=mysqli_fetch_array($result))
-      {
+   while($row=mysqli_fetch_array($result))
+   {
         // $row2 = mysqli_fetch_array($result2);
 
-        ?>
+    ?>
 
-  <div class="container">
 
-         <div class="col-md-3" >
-          <img src="<?=$row['product_image']?>" alt="Generic placeholder image" width="180" height="140">
+
+
+       <div class="col-md-3" >
+        <img src="<?=$row['product_image']?>" alt="Generic placeholder image" width="180" height="140">
 
         <strong>상품명 :</strong> <?=$row['product_name']?>
         <br>
@@ -111,13 +119,14 @@ body { padding-bottom: 70px; }
 
         <form method="get" action="manage_edit_goods.php">
           <input type ="hidden" name="product_id" value="<?=$row['product_id']?>">
+          <input type ="hidden" name="category" value="<?=$category?>">
           <button type="submit" class="btn btn-secondary btn-sm" >상품수정</button>
         </form>
-<?
 
- ?>
+
         <form method="get" action="delete_goods.php">
           <input type ="hidden" name="product_id" value="<?=$row['product_id']?>">
+          <input type ="hidden" name="category" value="<?=$category?>">
           <!-- hidden 처리해놓을것 -->
           <button type="submit" class="btn btn-secondary btn-sm">상품삭제
           </button>
@@ -126,7 +135,7 @@ body { padding-bottom: 70px; }
         <!-- 우리가 원하는 모양으로 나타내주는 코드를 그냥 php내부에서 html로 만들어줘야할듯 -->
       </div>
     </div>
-<br />
+    <br />
     <?php
     // $no = $no - 1;
   }
