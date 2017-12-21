@@ -132,50 +132,95 @@ $src2 = $row['description'];
 </script>
 
 <body>
-  <div class="center-btn" id="quick"><img src="img/ad.jpg" alt="ad"><br>
-    <button><a href="#"><span class="glyphicon glyphicons-chevron-up" aria-hidden="true"></span>
+  <div id="quick"><img src="img/ad.jpg" alt="ad"><br>
+    <button><span class="glyphicon glyphicons-chevron-up" aria-hidden="true"></span><a href="#">
       <strong>TOP</a></button>
   </div>
 
-  <div class="banner">
-      <td align="center"><a href="index.php" ><img src="img/title.png" border="0" id="banimg" ></a></td>
-  </div>
 
 
-  <ul class="index_src">
-   <li class="index_image"><a href="#introduction"><img src="img/nav_1.png" alt="..."  class="img_pro"></a></li>
-   <li class="index_image"><a  href="#list"><img src="img/nav_2.png" alt="..." class="img_pro"></a></li>
-   <li class="index_image"><a href="#location"><img src="img/nav_3.png" alt="..." class="img_pro"></a></li>
-  </ul>
-
-&nbsp;
-
-        <div class="container">
-          <div class="navbar-header">
-          <form class="navbar-form navbar-right" role="search" action="search_list.php" method="get" >
-               <div class="form-group">
-                 <select name="search_category" class="form-control">
-                <option value="01">반건조생선</option>
-                <option value="02">건어물</option>
-                <option value="03">젓갈</option>
-                <option value="04">선물세트</option>
-                </select>
-                 <input type="text" name="search_keyword" class="form-control" placeholder="Search">
-               </div>
-               <button type="submit" class="btn btn-default" >검색</button>
-             </form>
+  <div class="navbar-wrapper">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar justified"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
         </div>
+      </button>
+      <form class="navbar-form navbar-right" role="search">
+       <div class="form-group">
+         <input type="text" class="form-control" placeholder="Search">
+       </div>
+       <button type="submit" class="btn btn-default" onclick="javascript:location.href='localhost/shop/list.php'">Submit</button>
+     </form>
+   </div>
 
-    </div>
+
+<ul>
+ <li><a href="#introduction"><img src="img/nav_1.png" alt="..." class="index_image"></a></li>
+ <li><a  href="#list"><img src="img/nav_2.png" alt="..." class="index_image"></a></li>
+ <li><a href="#location"><img src="img/nav_3.png" alt="..." class="index_image"></a></li>
+</ul>
+&nbsp;
     <!-- <img src="img/nav_1.png" alt="...">
   <img src="img/nav_2.png" alt="...">
     <img src="img/nav_3.png" alt="..."> -->
-    <p>
-    &nbsp;
-    </p>
-
 
 <div id="main">
+  <div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+    </ol>
+    <div class="carousel-inner" role="listbox">
+      <div class="item active">
+        <img class="first-slide" src="img/1.jpg" alt="First slide">
+        <div class="container">
+          <div class="carousel-caption">
+            <h1>Example headline.</h1>
+            <p>Note: If you're viewing this page via a <code>file://</code> URL, the "next" and "previous" Glyphicon buttons on the left and right might not load/display properly due to web browser security rules.</p>
+            <p><a class="btn btn-lg btn-primary" href="#" role="button">Sign up today</a></p>
+          </div>
+        </div>
+      </div>
+      <div class="item">
+        <img class="second-slide" src="img/2.jpg" alt="Second slide">
+        <div class="container">
+          <div class="carousel-caption">
+            <h1>Another example headline.</h1>
+            <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+            <p><a class="btn btn-lg btn-primary" href="#" role="button">Learn more</a></p>
+          </div>
+        </div>
+      </div>
+      <div class="item">
+        <img class="third-slide" src="img/4.jpg" alt="Third slide">
+        <div class="container">
+          <div class="carousel-caption">
+            <h1>One more for good measure.</h1>
+            <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+            <p><a class="btn btn-lg btn-primary" href="#" role="button">Browse gallery</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+
+
+
+
 
 <div class="vertical">
   <span class="vertical">
@@ -187,7 +232,7 @@ $src2 = $row['description'];
    <div class="row featurette">
     <div class="col-md-7 col-md-push-5">
       <p class="lead">
-        <!-- 소개 문구 -->
+      qq  <!-- 소개 문구 -->
         <?=$src2?>
       </p>
     </div>
