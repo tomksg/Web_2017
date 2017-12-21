@@ -5,7 +5,7 @@ include("config_getdata.php");
 
 //조건문에 박을 쿼리문
 
-// $category = $_GET[category];
+$category = $_GET[category];
 // $result_count=mysqli_query($bd,"SELECT count(*) FROM gunfish");
 // $result_row=mysqli_fetch_row($result_count);
 // $total_row = $result_row[0];
@@ -70,7 +70,8 @@ include("config_getdata.php");
  <div class="container">
    <h2>분류</h2>
    <form method="get" action="manage_new_goods.php">
-     <input type ="hidden" >
+
+    <input type ="hidden" name="category" value="<?=$row['category']?>">
      <!-- hidden 처리해놓을것 -->
      <button type="submit" class="btn btn-secondary btn-sm">새항목 추가
      </button>
@@ -112,6 +113,7 @@ include("config_getdata.php");
 
         <form method="get" action="manage_edit_goods.php">
           <input type ="hidden" name="product_id" value="<?=$row['product_id']?>">
+          <input type ="hidden" name="category" value="<?=$row['category']?>">
           <button type="submit" class="btn btn-secondary btn-sm" >상품수정</button>
         </form>
 

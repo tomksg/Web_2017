@@ -4,7 +4,7 @@ include('lock.php');
 include("config_getdata.php");
 
 
-$category = $_GET[category];
+$category = $_GET['category'];
 
 // 총 게시물 수 를 구한다.
 $result_last=mysqli_query($bd,"SELECT * FROM gunfish order by product_id desc limit 1");
