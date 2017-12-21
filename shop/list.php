@@ -5,6 +5,7 @@
 include("config_getdata.php");
 
 // category값 01~06에 따라 다른 목록 업로드
+$category=$_GET[category];
 
 ?>
 
@@ -27,9 +28,7 @@ include("config_getdata.php");
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
 <body>
-<?php
-$category=$_GET[category];
- ?>
+
 
   <div class="navbar-wrapper">
     <div class="container">
