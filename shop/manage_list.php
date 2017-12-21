@@ -47,19 +47,7 @@ $category = $_GET['category'];
 
   <div class="jumbotron">
    <div class="container">
-     <h2><?php
-     if($category==1){
-      echo "반건조생선";
-    }elseif ($category==2){
-      echo "건어물";
-    }elseif ($category==3){
-      echo "젓갈";
-    }elseif ($category==4){
-      echo "선물세트";
-    }else{
-      break;
-    }echo "string";
-    ?></h2>
+    <h1><strong>통합 상품 관리</strong></h1>
     <hr>
     <form method="get" action="manage_new_goods.php">
 
