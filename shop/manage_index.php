@@ -36,7 +36,7 @@ include("config_getdata.php");
          </div>
 
          <div class="col-lg-1">
-           <a href="manage_list.php">
+           <a href="manage_list.php?category=1">
          <img src="img/img_02.png" alt="move to manage_list" width="300" height="230">
        </a>
          </div>
