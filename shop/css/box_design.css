@@ -18,20 +18,33 @@ dl img {
 	padding-top:30px;
 }
 
+#banimg {
+  width: 100%;
+  height: 120px;
+  align:center;
+}
+
+
+
 ul {
     list-style:none;
     margin:0;
     padding:0;
 }
 .index_image{
-  width: 421px;
-    height: 45px;
+  width: 33.3%;
+    height: auto;
+    overflow: hidden;
+     vertical-align: middle;
 }
 
-.iist_image{
-  width: 315px;
-    height: 45px;
+
+.list_image{
+  width: 25%;
+    height: 25px;
 }
+
+
 
 .category{
   width:250px;

@@ -40,40 +40,20 @@ echo $row['product_name'];
 </head>
 <body>
 
-  <div class="navbar-wrapper">
-    <div class="container">
 
-      <nav class="navbar navbar-static-top">
-        <div class="container">
-          <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-              <span class="sr-only">Toggle navigation</span>
-              <span class="icon-bar justified"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-            </button>
+          <div class="banner">
+              <td align="center"><a href="index.php" ><img src="img/title.png" border="0" id="banimg" ></a></td>
           </div>
-          <form class="navbar-form navbar-right" role="search">
-           <div class="form-group">
-             <input type="text" class="form-control" placeholder="Search">
-           </div>
-           <button type="submit" class="btn btn-default" onclick="javascript:location.href='localhost/shop/list.php'">Submit</button>
-         </form>
-       </div>
-     </nav>
-   </div>
- </div>
 
- <ul class="nav nav-pills nav-justified">
-  <li role="presentation"><a href="list.php?category=1">반건조생선</a></li>
-  <li role="presentation"><a href="list.php?category=2">건어물</a></li>
-  <li role="presentation"><a href="list.php?category=3">젓갈</a></li>
-  <li role="presentation"><a href="list.php?category=4">선물세트</a></li>
-</ul>
+         <ul>
+          <li class="list_image"><a href="list.php?categrory=1"><img src="img/lnav_1.png" alt="..." ></a></li>
+          <li class="list_image"><a  href="list.php?categrory=2"><img src="img/lnav_2.png" alt="..." class=""></a></li>
+          <li class="list_image"><a href="list.php?categrory=3"><img src="img/lnav_3.png" alt="..." class=""></a></li>
+           <li class="list_image"><a href="list.php?categrory=4"><img src="img/lnav_4.png" alt="..." class=""></a></li>
+         </ul>
 
 
 <hr class="featurette-divider">
-<div class="jumbotron">
  <div class="container">
 
   <h2>분류</h2>
@@ -105,7 +85,6 @@ echo $row['product_name'];
     </dl>
 
   </div>
-</div>
 
 <footer class="footer-distributed">
  <p class="footer-links" >

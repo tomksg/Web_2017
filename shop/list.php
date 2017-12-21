@@ -30,29 +30,6 @@ $category=$_GET['category'];
 <body>
 
 
-  <div class="navbar-wrapper">
-    <div class="container">
-
-      <nav class="navbar navbar-static-top">
-        <div class="container">
-          <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-              <span class="sr-only">Toggle navigation</span>
-              <span class="icon-bar justified"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-            </button>
-          </div>
-          <form class="navbar-form navbar-right" role="search">
-           <div class="form-group">
-             <input type="text" class="form-control" placeholder="Search">
-           </div>
-           <button type="submit" class="btn btn-default">Submit</button>
-         </form>
-       </div>
-     </nav>
-   </div>
- </div>
 <!--
 <ul class="nav nav-pills nav-justified">
   <li role="presentation"><a href="list.php?categrory=1">반건조생선</a></li>
@@ -60,12 +37,41 @@ $category=$_GET['category'];
     <li role="presentation"><a href="list.php?categrory=3">젓갈</a></li>
     <li role="presentation"><a href="list.php?categrory=4">선물세트</a></li>
   </ul> -->
-  <ul>
-   <li><a href="list.php?category=1"><img src="img/lnav_1.png" alt="..." class="iist_image"></a></li>
-   <li><a  href="list.php?category=2"><img src="img/lnav_2.png" alt="..." class="iist_image"></a></li>
-   <li><a href="list.php?category=3"><img src="img/lnav_3.png" alt="..." class="iist_image"></a></li>
-   <li><a href="list.php?category=4"><img src="img/lnav_4.png" alt="..." class="iist_image"></a></li>
- </ul>
+
+
+      <div class="banner">
+          <td align="center"><a href="index.php" ><img src="img/title.png" border="0" id="banimg" ></a></td>
+      </div>
+
+      <ul>
+       <li class="list_image"><a href="list.php?categrory=1"><img src="img/lnav_1.png" alt="..." ></a></li>
+       <li class="list_image"><a  href="list.php?categrory=2"><img src="img/lnav_2.png" alt="..." class=""></a></li>
+       <li class="list_image"><a href="list.php?categrory=3"><img src="img/lnav_3.png" alt="..." class=""></a></li>
+        <li class="list_image"><a href="list.php?categrory=4"><img src="img/lnav_4.png" alt="..." class=""></a></li>
+      </ul>
+<p>
+ &nbsp;</p>
+          <div class="container">
+
+              <div class="container">
+                <div class="navbar-header">
+                <form class="navbar-form navbar-right" role="search" action="search_list.php" method="get" >
+                     <div class="form-group">
+                       <select name="search_category" class="form-control">
+                      <option value="01">반건조생선</option>
+                      <option value="02">건어물</option>
+                      <option value="03">젓갈</option>
+                      <option value="04">선물세트</option>
+                      </select>
+                       <input type="text" name="search_keyword" class="form-control" placeholder="Search">
+                     </div>
+                     <button type="submit" class="btn btn-default" >검색</button>
+                   </form>
+              </div>
+
+          </div>
+        </div>
+
  &nbsp;
  <!-- 근데 창줄이면 깨지네 ;; -->
  <br>
