@@ -132,16 +132,8 @@ $src2 = $row['description'];
 </script>
 
 <body>
-  <?php
 
-//   $query2 = "SELECT * from gunfish WHERE product_id='$_COOKIE['what_you_saw']'";
-// //$query2 = "SELECT description from main WHERE number=1";
-// $result2 = mysqli_query($bd,$query) or die ("Error Querying database.");
-// // $result2 = mysql_query($bd,$query2)
-// $row2 = mysqli_fetch_array($result2);
-
-  ?>
-  <div id="quick"><img src="" alt=" "><br>
+  <div id="quick"><img src= alt=" "><br>
     <button><span class="glyphicon glyphicons-chevron-up" aria-hidden="true"></span><a href="#">
       <strong>TOP</a></button>
   </div>
@@ -165,7 +157,7 @@ $src2 = $row['description'];
        <button type="submit" class="btn btn-default" onclick="javascript:location.href='localhost/shop/list.php'">Submit</button>
      </form>
    </div>
- </div>
+
 
 
 <ul>
@@ -173,61 +165,78 @@ $src2 = $row['description'];
  <li><a  href="#list"><img src="img/nav_2.png" alt="..." class="index_image"></a></li>
  <li><a href="#location"><img src="img/nav_3.png" alt="..." class="index_image"></a></li>
 </ul>
-&nbsp;
+</div>
     <!-- <img src="img/nav_1.png" alt="...">
   <img src="img/nav_2.png" alt="...">
     <img src="img/nav_3.png" alt="..."> -->
 
-    <div id="myCarousel" class="carousel slide" data-ride="carousel" style="width:100%">
-      <!-- Indicators -->
-      <ol class="carousel-indicators">
-        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-        <li data-target="#myCarousel" data-slide-to="1"></li>
-        <li data-target="#myCarousel" data-slide-to="2"></li>
-      </ol>
-      <div class="carousel-inner" role="listbox">
-        <div class="item active">
-          <img class="first-slide" src="img/1.jpg" alt="First slide">
-          <div class="container">
-            <div class="carousel-caption">
-              <h1>Example headline.</h1>
-              <p></p>
-            </div>
-          </div>
-        </div>
-        <div class="item">
-          <img class="second-slide" src="img/2.jpg" alt="Second slide">
-          <div class="container">
-            <div class="carousel-caption">
-              <h1>Another example headline.</h1>
-              <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-              <p></p>
-            </div>
-          </div>
-        </div>
-        <div class="item">
-          <img class="third-slide" src="img/4.jpg" alt="Third slide">
-          <div class="container">
-            <div class="carousel-caption">
-              <h1>One more for good measure.</h1>
-              <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-              <p></p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
-        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-        <span class="sr-only">Previous</span>
-      </a>
-      <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
-        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-        <span class="sr-only">Next</span>
-      </a>
-    </div>
 
 
 <div id="main">
+<style>
+#myCarousel img{
+   width:100%;
+   height:100%;
+   background-size:auto 100%;
+}
+.item{
+  height:600px;
+}
+
+</style>
+  <div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators" >
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+    </ol>
+    <div class="carousel-inner" role="listbox">
+      <div class="item active">
+        <img class="first-slide" src="img/1.jpg" alt="First slide">
+        <div class="container">
+          <div class="carousel-caption">
+            <h1>Example headline.</h1>
+            <p></p>
+          </div>
+        </div>
+      </div>
+      <div class="item">
+        <img class="second-slide" src="img/2.jpg" alt="Second slide">
+        <div class="container">
+          <div class="carousel-caption">
+            <h1>Another example headline.</h1>
+            <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+            <p></p>
+          </div>
+        </div>
+      </div>
+      <div class="item">
+        <img class="third-slide" src="img/4.jpg" alt="Third slide">
+        <div class="container">
+          <div class="carousel-caption">
+            <h1>One more for good measure.</h1>
+            <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+            <p></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+
+
+
+
+
+
   <div class="vertical">
   <span class="vertical">
     건어물집 소개
