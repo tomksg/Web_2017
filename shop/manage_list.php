@@ -5,7 +5,7 @@ include("config_getdata.php");
 
 //조건문에 박을 쿼리문
 
-$category = $_GET[category];
+$category = $_GET['category'];
 // $result_count=mysqli_query($bd,"SELECT count(*) FROM gunfish");
 // $result_row=mysqli_fetch_row($result_count);
 // $total_row = $result_row[0];
