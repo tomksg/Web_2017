@@ -133,16 +133,16 @@ $src2 = $row['description'];
 
 <body>
 
-  <div id="quick"><img src=img/ad2.jpg alt="ad"><br>
+  <div id="quick"><br>
     <button><span class="glyphicon glyphicons-chevron-up" aria-hidden="true"></span><a href="#">
-      <strong>TOP</a></button>
-        <button><span class="glyphicon glyphicons-chevron-down" aria-hidden="true"></span><a href="#">
-          <strong>DOWN</a></button>
+      <strong>page-up</a></button><br>
+        <button><span class="glyphicon glyphicons-chevron-down" aria-hidden="true"></span><a href="#location">
+          <strong>page-down</a></button>
   </div>
 
 
 
-  <div class="navbar-wrapper">
+<!--   <div class="navbar-wrapper">
     <div class="container">
       <div class="navbar-header">
         <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
@@ -158,9 +158,25 @@ $src2 = $row['description'];
        </div>
        <button type="submit" class="btn btn-default" onclick="javascript:location.href='localhost/shop/list.php'">Submit</button>
      </form>
-   </div>
+   </div> -->
 
+  <div class="container">
+    <div class="navbar-header">
+      <form class="navbar-form navbar-right" role="search" action="search_list.php" method="get" >
+       <div class="form-group">
+         <select name="search_category" class="form-control">
+          <option value="01">반건조생선</option>
+          <option value="02">건어물</option>
+          <option value="03">젓갈</option>
+          <option value="04">선물세트</option>
+        </select>
+        <input type="text" name="search_keyword" class="form-control " placeholder="Search">
+      </div>
+      <button type="submit" class="btn btn-default" >검색</button>
+    </form>
+  </div>
 
+</div>
 
 
 
