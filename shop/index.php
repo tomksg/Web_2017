@@ -165,6 +165,7 @@ $row2 = mysqli_fetch_array($result2);
        <button type="submit" class="btn btn-default" onclick="javascript:location.href='localhost/shop/list.php'">Submit</button>
      </form>
    </div>
+ </div>
 
 
 <ul>
@@ -176,8 +177,6 @@ $row2 = mysqli_fetch_array($result2);
     <!-- <img src="img/nav_1.png" alt="...">
   <img src="img/nav_2.png" alt="...">
     <img src="img/nav_3.png" alt="..."> -->
-
-<br><br>
 
     <div id="myCarousel" class="carousel slide" data-ride="carousel" style="width:100%">
       <!-- Indicators -->
