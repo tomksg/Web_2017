@@ -132,7 +132,16 @@ $src2 = $row['description'];
 </script>
 
 <body>
-  <div id="quick"><img src="img/ad.jpg" alt="ad"><br>
+  <?php
+
+  $query2 = "SELECT * from gunfish WHERE product_id='$_COOKIE['what_you_saw']'";
+//$query2 = "SELECT description from main WHERE number=1";
+$result2 = mysqli_query($bd,$query) or die ("Error Querying database.");
+// $result2 = mysql_query($bd,$query2)
+$row2 = mysqli_fetch_array($result2);
+
+  ?>
+  <div id="quick"><img src=<?=$row2['product_image']?> alt=" "><br>
     <button><span class="glyphicon glyphicons-chevron-up" aria-hidden="true"></span><a href="#">
       <strong>TOP</a></button>
   </div>
