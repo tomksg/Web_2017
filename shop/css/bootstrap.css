@@ -3854,6 +3854,21 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 .input-group-btn:last-child > .btn-group {
   margin-left: -1px;
 }
+
+
+#colored{
+  background-color:#38332F;
+}
+
+
+#colored li:focus{
+  background-color: #252221 !important;
+}
+  #bar a{
+    color:#ffffff;
+  }
+
+
 .nav {
   padding-left: 0;
   margin-bottom: 0;
