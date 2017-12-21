@@ -14,6 +14,19 @@ if(!$_POST['product_id']) {
 }else{
     $product_id = $_POST['product_id'];
 }
+if(!$_POST['category']) {
+  echo("
+    <script>
+    window.alert('심각한 오류')
+    history.go(-1)
+    </script>
+    ");
+  exit;
+}
+
+else{
+    $category = $_POST['category'];
+}
 
 if(!$_POST['product_name']) {
   echo("
@@ -109,8 +122,8 @@ move_uploaded_file($tmp_name,$filename);
 // 전부다 확인절차 끝 - 이상없음
 // upload 시작
 
-$query = "INSERT INTO gunfish (product_id, product_name, product_image, product_price, product_info, product_from, product_weight, product_intro)
-VALUES ('$product_id', '$product_name', '$filename' , '$product_price','$product_info','$product_from','$product_weight','$product_intro')";
+$query = "INSERT INTO gunfish (product_id, product_name, product_image, product_price, product_info, product_from, product_weight, product_intro,category)
+VALUES ('$product_id', '$product_name', '$filename' , '$product_price','$product_info','$product_from','$product_weight','$product_intro','$category')";
 
 if ($bd->query($query) === TRUE) {
     echo "New record created successfully";

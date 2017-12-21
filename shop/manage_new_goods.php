@@ -3,6 +3,9 @@
 include('lock.php');
 include("config_getdata.php");
 
+
+$category = $_GET[category];
+
 // 총 게시물 수 를 구한다.
 $result_last=mysqli_query($bd,"SELECT * FROM gunfish order by product_id desc limit 1");
 if (!$result_last) {
@@ -46,6 +49,7 @@ $total_row = $result_row[0] + 1;
             <form action="product_upload.php" method="post" encType="multipart/form-data">
 
                 <input type="hidden" name="product_id" value="<?=$total_row?>">
+                <input type="hidden" name="category" value="<?=$category?>">
 <!-- hidden으로 바꾸어놓을것  -->
 
                 <tr>

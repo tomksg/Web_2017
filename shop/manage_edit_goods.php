@@ -9,6 +9,7 @@ $result_row=mysqli_fetch_row($result_count);
 $total_row = $result_row[0];
 
 $product_id = $_GET['product_id'];
+$category = $_GET['category'];
 //결과의 첫번째 열이 count(*) 의 결과다.
 //mysql_fetch_row 쓰면 $result_row[0] 처럼 숫자를 써서 접근을 해야한다.
 
@@ -45,7 +46,7 @@ $row=mysqli_fetch_array($result);
             <form action="product_update.php" method="post" encType="multipart/form-data">
 
                 <input type="hidden" name="product_id" value="<?=$product_id?>">
-
+<input type="hidden" name="category" value="<?=$category?>">
 
                 <tr>
                     <th>상품명</th>
