@@ -14,6 +14,17 @@ if(!$_POST['product_id']) {
 }else{
     $product_id = $_POST['product_id'];
 }
+if(!$_POST['category']) {
+  echo("
+    <script>
+    window.alert('심각한 오류')
+    history.go(-1)
+    </script>
+    ");
+  exit;
+}else{
+    $category = $_POST['category'];
+}
 
 if(!$_POST['product_name']) {
   echo("
@@ -117,7 +128,7 @@ move_uploaded_file($tmp_name,$filename);
 if ($bd->query($query) === TRUE) {
     echo "New record updated successfully";
     echo ("<meta http-equiv='Refresh' content='1;
-       URL=manage_list.php'>");
+       URL=manage_list.php?category=$category'>");
 } else {
     echo "Error: " . $query . "<br>" . $bd->error;
 }

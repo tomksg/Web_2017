@@ -22,9 +22,7 @@ if(!$_POST['category']) {
     </script>
     ");
   exit;
-}
-
-else{
+}else{
     $category = $_POST['category'];
 }
 
@@ -128,7 +126,7 @@ VALUES ('$product_id', '$product_name', '$filename' , '$product_price','$product
 if ($bd->query($query) === TRUE) {
     echo "New record created successfully";
     echo ("<meta http-equiv='Refresh' content='1;
-       URL=manage_list.php'>");
+       URL=manage_list.php?category=$category'>");
 } else {
     echo "Error: " . $query . "<br>" . $bd->error;
 }
