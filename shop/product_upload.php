@@ -125,7 +125,7 @@ VALUES ('$product_id', '$product_name', '$filename' , '$product_price','$product
 
 if ($bd->query($query) === TRUE) {
     echo "New record created successfully";
-    echo ("<meta http-equiv='Refresh' content='1;
+    echo ("<meta http-equiv='Refresh' content='0;
        URL=manage_list.php?category=$category'>");
 } else {
     echo "Error: " . $query . "<br>" . $bd->error;
