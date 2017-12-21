@@ -160,11 +160,14 @@ $src2 = $row['description'];
 
 
 
-<ul>
- <li><a href="#introduction"><img src="img/nav_1.png" alt="..." class="index_image"></a></li>
- <li><a  href="#list"><img src="img/nav_2.png" alt="..." class="index_image"></a></li>
- <li><a href="#location"><img src="img/nav_3.png" alt="..." class="index_image"></a></li>
-</ul>
+
+
+                <ul class="nav  nav-justified navbar-default" id="colored">
+              <li role="presentation" class="js-scroll-trigger" id="bar"><a href="#introduction">소개</a></li>
+                <li role="presentation" class="js-scroll-trigger" id="bar"><a  href="#list">상품목록</a></li>
+                <li role="presentation" class="js-scroll-trigger" id="bar"><a href="#location">오시는 길</a></li>
+              </ul>
+
 </div>
     <!-- <img src="img/nav_1.png" alt="...">
   <img src="img/nav_2.png" alt="...">

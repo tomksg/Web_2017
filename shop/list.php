@@ -43,14 +43,14 @@ $category=$_GET['category'];
     <td align="center"><a href="index.php" ><img src="img/title.png" border="0" id="banimg" ></a></td>
   </div>
 
-  <ul>
-   <li class="list_image"><a href="list.php?category=1"><img src="img/lnav_1.png" alt="..." ></a></li>
-   <li class="list_image"><a  href="list.php?category=2"><img src="img/lnav_2.png" alt="..." class=""></a></li>
-   <li class="list_image"><a href="list.php?category=3"><img src="img/lnav_3.png" alt="..." class=""></a></li>
-   <li class="list_image"><a href="list.php?category=4"><img src="img/lnav_4.png" alt="..." class=""></a></li>
- </ul>
- <p>
- &nbsp;</p>
+
+
+             <ul class="nav  nav-justified navbar-default" id="colored">
+           <li role="presentation" class="js-scroll-trigger" id="bar"><a href="img/lnav_1.png">반건조생선</a></li>
+             <li role="presentation" class="js-scroll-trigger" id="bar"><a  href="img/lnav_2.png">건어물</a></li>
+             <li role="presentation" class="js-scroll-trigger" id="bar"><a href="img/lnav_3.png">젓갈</a></li>
+             <li role="presentation" class="js-scroll-trigger" id="bar"><a href="img/lnav_4.png">선물세트</a></li>
+           </ul>
  <div class="container">
 
   <div class="container">
