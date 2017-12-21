@@ -133,7 +133,7 @@ $src2 = $row['description'];
 
 <body>
   <div id="quick"><img src="img/ad.jpg" alt="ad"><br>
-    <button><span class="glyphicon glyphicons-chevron-up" aria-hidden="true"></span><a href="#">
+    <button><a href="#"><span class="glyphicon glyphicons-chevron-up" aria-hidden="true"></span>
       <strong>TOP</a></button>
   </div>
 
@@ -157,6 +157,12 @@ $src2 = $row['description'];
      </form>
    </div>
 
+ </div>
+ <ul class="nav nav-pills nav-justified">
+  <li role="presentation" class="js-scroll-trigger"><a href="#introduction">소개</a></li>
+  <li role="presentation" class="js-scroll-trigger"><a  href="#list">상품목록</a></li>
+  <li role="presentation" class="js-scroll-trigger"><a href="#location">오시는 길</a></li>
+</ul>
 
 <ul>
  <li><a href="#introduction"><img src="img/nav_1.png" alt="..." class="index_image"></a></li>
