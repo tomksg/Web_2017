@@ -38,10 +38,10 @@ $category = $_GET['category'];
         </div>
 
        <ul>
-        <li class="list_image"><a href="list.php?categrory=1"><img src="img/lnav_1.png" alt="..." ></a></li>
-        <li class="list_image"><a  href="list.php?categrory=2"><img src="img/lnav_2.png" alt="..." class=""></a></li>
-        <li class="list_image"><a href="list.php?categrory=3"><img src="img/lnav_3.png" alt="..." class=""></a></li>
-         <li class="list_image"><a href="list.php?categrory=4"><img src="img/lnav_4.png" alt="..." class=""></a></li>
+        <li class="list_image"><a href="list.php?category=1"><img src="img/lnav_1.png" alt="..." ></a></li>
+        <li class="list_image"><a  href="list.php?category=2"><img src="img/lnav_2.png" alt="..." class=""></a></li>
+        <li class="list_image"><a href="list.php?category=3"><img src="img/lnav_3.png" alt="..." class=""></a></li>
+         <li class="list_image"><a href="list.php?category=4"><img src="img/lnav_4.png" alt="..." class=""></a></li>
        </ul>
  <p>
   &nbsp;</p>

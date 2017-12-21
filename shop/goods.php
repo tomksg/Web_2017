@@ -14,8 +14,8 @@ $product_id=$_GET['product_id'];
 echo '<br>';
 echo $product_id;
 
-$query = "SELECT * FROM gunfish WHERE product_id = '$product_id'";
-$result = mysqli_query($bd, $query);
+// $query = "SELECT * FROM gunfish WHERE product_id = '$product_id'";
+$result = mysqli_query($bd, "SELECT * FROM gunfish WHERE product_id = '$product_id'");
 $row=mysqli_fetch_row($result);
 
 echo $row['product_id'];
