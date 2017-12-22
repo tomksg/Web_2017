@@ -68,7 +68,7 @@ $category=$_GET['category'];
 <div class="container">
 
 
- <h2><script >
+ <h1><script >
   var category = '<?=$category?>'
   switch(category){
     case '1':
@@ -86,7 +86,7 @@ $category=$_GET['category'];
     default:
       break;
   }
-</script></h2>
+</script></h1>
  <hr>
 
  <dl>
