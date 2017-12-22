@@ -50,10 +50,10 @@ $row=mysqli_fetch_array($result);
 
 
                <ul class="nav  nav-justified navbar-default" id="colored">
-             <li role="presentation" class="js-scroll-trigger" id="bar"><a href="img/lnav_1.png">반건조생선</a></li>
-               <li role="presentation" class="js-scroll-trigger" id="bar"><a  href="img/lnav_2.png">건어물</a></li>
-               <li role="presentation" class="js-scroll-trigger" id="bar"><a href="img/lnav_3.png">젓갈</a></li>
-               <li role="presentation" class="js-scroll-trigger" id="bar"><a href="img/lnav_4.png">선물세트</a></li>
+             <li role="presentation" class="js-scroll-trigger" id="bar"><a href="list.php?category=1">반건조생선</a></li>
+               <li role="presentation" class="js-scroll-trigger" id="bar"><a  href="list.php?category=2">건어물</a></li>
+               <li role="presentation" class="js-scroll-trigger" id="bar"><a href="list.php?category=3">젓갈</a></li>
+               <li role="presentation" class="js-scroll-trigger" id="bar"><a href="list.php?category=4g">선물세트</a></li>
              </ul>
   <hr class="featurette-divider">
   <div class="container">
