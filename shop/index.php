@@ -130,12 +130,15 @@ $src2 = $row['description'];
 </script>
 
 <body>
-
+<style>
+a{
+  color: black;
+  }</style>
   <div id="quick"><br>
     <div class="btn-group-vertical" role="group">
-    <button class="btn btn-default"><span class="glyphicon glyphicon-chevron-up" aria-hidden="true"></span><a href="#" color="black">
+    <button class="btn btn-default"><span class="glyphicon glyphicon-chevron-up" aria-hidden="true"></span><a href="#">
       <strong> TOP </a></button><br>
-        <button class="btn btn-default"><span class="glyphicon glyphicon-chevron-down" aria-hidden="true"></span><a href="#location" color="black">
+        <button class="btn btn-default"><span class="glyphicon glyphicon-chevron-down" aria-hidden="true"></span><a href="#location">
           <strong>DOWN</a></button>
   </div>
 </div>

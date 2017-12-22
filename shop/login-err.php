@@ -1,8 +1,5 @@
 <?php
 
-// error_reporting(E_ALL);
-// ini_set("display_errors", 1);
-
     include("config_settings.php");  //DB연결을 위한 config.php를 로딩합니다.
     session_start();   //세션의 시작
 
@@ -17,28 +14,17 @@
       if(!$result){
        die(mysqli_error($bd));
      }
-    //$row=mysql_fetch_array($result);
-    //$active=$row['active'];
-    // $count = $result->num_rows;
      $count=mysqli_num_rows($result);
 
-    // If result matched $myusername and $mypassword, table row must be 1 row
-    if($count==1)  //count가 1이라는 것은 아이디와 패스워드가 일치하는 db가 하나 있음을 의미합니다.
+      if($count==1)  //count가 1이라는 것은 아이디와 패스워드가 일치하는 db가 하나 있음을 의미합니다.
     {
-        // session_register("myusername");
       $_SESSION['login_user']=$myusername;
 
         header("location: manage_index.php");  // welcome.php 페이지로 넘깁니다.
       }
       else
       {
-        //  echo "<script>alert(\"Login 실패\");</script>";
-        // $error="Your Login Name or Password is invalid";
         header("location: login-err.php");
-        // echo ("<meta http-equiv='Refresh' content='5;
-        //  URL=login.php'>");//read.php?id=$id
-        // exit;
-       // header("location: 2.php");  // welcome.php
       }
     }
     ?>

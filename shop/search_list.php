@@ -5,11 +5,7 @@ include("config_getdata.php");
 $search_category=$_GET['search_category'];
 $search_keyword=$_GET['search_keyword'];
 
-
-// category값 01~06에 따라 다른 목록 업로드
-
 ?>
-
 
 <!DOCTYPE html>
 <html lang="kor">
@@ -95,14 +91,10 @@ $search_keyword=$_GET['search_keyword'];
         <?php
 
         $result = mysqli_query($bd, "SELECT * FROM gunfish WHERE product_name LIKE '%$search_keyword%' AND category='$search_category'");
-        // $row=mysqli_fetch_array($result);
-
         while($row=mysqli_fetch_array($result))
         {
 
           ?>
-
-
                 <div class="col-lg-4">
                   <a href="goods.php?product_id=<?=$row['product_id']?>"><img src="<?=$row['product_image']?>" alt="Generic placeholder image" width="180" height="140"></a>
                   <br>

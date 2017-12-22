@@ -6,10 +6,6 @@ include("config_getdata.php");
 //조건문에 박을 쿼리문
 
 $category = $_GET['category'];
-// $result_count=mysqli_query($bd,"SELECT count(*) FROM gunfish");
-// $result_row=mysqli_fetch_row($result_count);
-// $total_row = $result_row[0];
-// $no = $total_row;
 
 
 ?>
@@ -88,22 +84,13 @@ $category = $_GET['category'];
 
 
          <?php
-
-      // $no = $total_row;
-
-// 테스트용
-        // $result2 = mysqli_query($bd, "SELECT * FROM gunfish WHERE product_id ='$no'");
-// test
          $category=$_GET['category'];
 
          $query = "SELECT * FROM gunfish WHERE category = '$category' ORDER BY product_id DESC";
          $result = mysqli_query($bd, $query);
 
-      // $row = mysqli_fetch_array($result);
-// while($row=mysqli_fetch_array($result))
          while($row=mysqli_fetch_array($result))
          {
-        // $row2 = mysqli_fetch_array($result2);
 
           ?>
 
@@ -158,7 +145,6 @@ $category = $_GET['category'];
 
 
         <?php
-    // $no = $no - 1;
       }
       mysqli_close($bd);
       ?>

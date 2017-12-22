@@ -1,7 +1,6 @@
 
 <?php
 
-// include('lock.php');
 include("config_getdata.php");
 
 // category값 01~06에 따라 다른 목록 업로드
@@ -62,7 +61,6 @@ $category=$_GET['category'];
 </div>
 
 &nbsp;
-<!-- 근데 창줄이면 깨지네 ;; -->
 <br>
 
 <div class="container">
@@ -118,7 +116,6 @@ $category=$_GET['category'];
       </div>
 
       <?php
-    // $no = $no - 1;
     }
     mysqli_close($bd);
     ?>

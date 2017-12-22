@@ -12,8 +12,6 @@ if (!$result_last) {
     printf("Error: %s\n", mysqli_error($bd));
     exit();
 }
-// echo "<br><br><br><br><br><br><br><br>";
-// echo $result_last;
 $result_row=mysqli_fetch_array($result_last);
 $total_row = $result_row[0] + 1;
 //총 결과들의 숫자 내가 여기서 쓸것은 이 맨 마지막 결과값을 사용할것
@@ -95,14 +93,9 @@ $total_row = $result_row[0] + 1;
 
                     <td colspan="2">
                         <input type="submit" value="저장" onclick="" class="pull-right"/>
-                        <!-- <input type="button" value="reset" class="pull-left"/>
-
-                         -->
                         <!-- 리셋시 원래 서버에 저장되어있는거 업로드 -->
                         <input type="button" value="상품 목록으로... " class="pull-left" onclick="history.back(-1)"/>
-                    <!-- <a class="btn btn-default" onclick="sendData()"> 등록 </a>
-                    <a class="btn btn-default" type="reset"> reset </a>
-                    <a class="btn btn-default" onclick="javascript:location.href='list.jsp'">글 목록으로...</a> -->
+\
                 </td>
             </tr>
         </form>
