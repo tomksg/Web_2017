@@ -21,18 +21,18 @@ $cur_category= mysqli_fetch_row($result2);
 $category = $cur_category[0];
 
     // 서버에 접근해서 지정된 카테고리의 아이디정보 이미지 삭제
-  
+
     // 서버에서 파일삭제후 manage_list.php로 바로 리다이렉팅
-echo "초기실행문 oK? total -> ";
-echo $total_row;
-echo "<br>current_row->";
-echo $current_row;
+// echo "초기실행문 oK? total -> ";
+// echo $total_row;
+// echo "<br>current_row->";
+// echo $current_row;
 
 $query = "DELETE FROM gunfish WHERE product_id='$current_row'";
 
 if ($bd->query($query) === TRUE) {
     echo "record deleted successfully";
-    echo ("<meta http-equiv='Refresh' content='10;
+    echo ("<meta http-equiv='Refresh' content='0;
        URL=manage_list.php?category=$category'>");
 } else {
     echo "Error: " . $query . "<br>" . $bd->error;

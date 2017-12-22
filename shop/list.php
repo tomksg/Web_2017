@@ -5,7 +5,8 @@ include("config_getdata.php");
 
 // category값 01~06에 따라 다른 목록 업로드
 $category=$_GET['category'];
-
+session_start();
+session_destroy();
 ?>
 
 
