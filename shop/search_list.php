@@ -32,7 +32,7 @@ $search_keyword=$_GET['search_keyword'];
 
 
  <div class="banner">
-   <td align="center"><a href="shop/index.php" ><img src="img/title.png" border="0" id="banimg" ></a></td>
+   <td align="center"><a href="index.php" ><img src="img/title.png" border="0" id="banimg" ></a></td>
  </div>
 
 

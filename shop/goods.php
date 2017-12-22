@@ -93,13 +93,13 @@ $category=$row['category'];
           <strong>제품특징 :</strong> <?=$row['product_info']?>
         </p>
         <p>
-          <strong>원산지</strong><?=$row['product_from']?>
+          <strong>원산지 : </strong><?=$row['product_from']?>
         </p>
         <p>
-          <strong>중량</strong><?=$row['product_weight']?>
+          <strong>중량 (g) : </strong><?=$row['product_weight']?>
         </p>
         <p>
-          <strong>소개</strong><?=$row['product_intro']?>
+          <strong>소개 : </strong><?=$row['product_intro']?>
         </p>
 
       </div>
