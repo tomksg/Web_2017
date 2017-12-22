@@ -30,14 +30,6 @@ $category=$_GET['category'];
 <body>
 
 
-<!--
-<ul class="nav nav-pills nav-justified">
-  <li role="presentation"><a href="list.php?categrory=1">반건조생선</a></li>
-    <li role="presentation"><a href="list.php?categrory=2">건어물</a></li>
-    <li role="presentation"><a href="list.php?categrory=3">젓갈</a></li>
-    <li role="presentation"><a href="list.php?categrory=4">선물세트</a></li>
-  </ul> -->
-
 
   <div class="banner">
     <td align="center"><a href="index.php" ><img src="img/title.png" border="0" id="banimg" ></a></td>
@@ -46,10 +38,10 @@ $category=$_GET['category'];
 
 
              <ul class="nav  nav-justified navbar-default" id="colored">
-           <li role="presentation" class="js-scroll-trigger" id="bar"><a href="img/lnav_1.png">반건조생선</a></li>
-             <li role="presentation" class="js-scroll-trigger" id="bar"><a  href="img/lnav_2.png">건어물</a></li>
-             <li role="presentation" class="js-scroll-trigger" id="bar"><a href="img/lnav_3.png">젓갈</a></li>
-             <li role="presentation" class="js-scroll-trigger" id="bar"><a href="img/lnav_4.png">선물세트</a></li>
+           <li role="presentation" class="js-scroll-trigger" id="bar"><a href="list.php?category=1">반건조생선</a></li>
+             <li role="presentation" class="js-scroll-trigger" id="bar"><a  href="list.php?category=2">건어물</a></li>
+             <li role="presentation" class="js-scroll-trigger" id="bar"><a href="list.php?category=3">젓갈</a></li>
+             <li role="presentation" class="js-scroll-trigger" id="bar"><a href="list.php?category=4g">선물세트</a></li>
            </ul>
 
   <div class="container">

@@ -164,20 +164,6 @@ $src2 = $row['description'];
 
      <div class="banner">
        <td align="center"><a href="index.php" ><img src="img/title.png" border="0" id="banimg" ></a></td>
- <div class="container">
-      <form class="navbar-form navbar-right" role="search" action="search_list.php" method="get" >
-       <div class="form-group">
-         <select name="search_category" class="form-control">
-          <option value="01">반건조생선</option>
-          <option value="02">건어물</option>
-          <option value="03">젓갈</option>
-          <option value="04">선물세트</option>
-        </select>
-        <input type="text" name="search_keyword" class="form-control " placeholder="Search">
-      </div>
-      <button type="submit" class="btn btn-default" >검색</button>
-    </form>
-</div>
      </div>
 
 
@@ -194,6 +180,20 @@ $src2 = $row['description'];
                 <li role="presentation" class="js-scroll-trigger" id="bar"><a href="#location">오시는 길</a></li>
               </ul>
 
+              <div class="container">
+                <form class="navbar-form navbar-right" role="search" action="search_list.php" method="get" >
+                  <div class="form-group">
+                    <select name="search_category" class="form-control">
+                      <option value="01">반건조생선</option>
+                      <option value="02">건어물</option>
+                      <option value="03">젓갈</option>
+                      <option value="04">선물세트</option>
+                    </select>
+                    <input type="text" name="search_keyword" class="form-control " placeholder="Search">
+                  </div>
+                  <button type="submit" class="btn btn-default" >검색</button>
+                </form>
+              </div>
 </div>
     <!-- <img src="img/nav_1.png" alt="...">
   <img src="img/nav_2.png" alt="...">
