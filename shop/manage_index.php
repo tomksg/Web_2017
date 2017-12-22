@@ -14,6 +14,7 @@ include("config_getdata.php");
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="css\bootstrap.css">
     <link rel="stylesheet" href="css/box_design.css">
+    <link rel="stylesheet" href="css/footer-distributed-with-address-and-phones.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
@@ -22,7 +23,8 @@ include("config_getdata.php");
 
 
 
-<h2>관리자 모드</h2>
+  <h2>관리자 모드</h2>
+
 
   <hr width="1500">
   <!-- 상품분류 선택이미지,페이지 누르면 링크로 redirect되게해야함 -->
@@ -41,6 +43,25 @@ include("config_getdata.php");
        </a>
          </div>
        </div>
+
+
+       <footer class="footer-distributed">
+         <p class="footer-links" >
+           <a href="login.php" style="color:#C6C4C3;">관리자모드</a>
+           &nbsp;
+           <a href="index.php" style="color:#C6C4C3;">홈페이지</a>
+
+         </p>
+       <hr />
+       주식회사 건어물집  | 사업자등록번호 : 123-45-67890 | 대표이사 : 김건어물
+       <br>
+       주소 : 경기도 고양시 덕양구 항공대학로 76 | 개인정보관리책임 : 김보안 | 이메일 : driedfood@naver.com
+       <br>
+       고객센터 : 02-333-3333 | FAX : 02-333-3333
+       <br>
+       COPYRIGHT © 2017 DRIED FOOD SHOP ALL RIGHTS RESERVED
+       </footer>
+
 
 </body>
 </html>
