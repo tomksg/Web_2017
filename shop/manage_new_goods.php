@@ -113,7 +113,7 @@ $total_row = $result_row[0] + 1;
 
 <footer class="footer-distributed">
   <p class="footer-links" >
-    <a href="login.php" style="color:#C6C4C3;">관리자모드</a>
+    <a href="manage_index.php" style="color:#C6C4C3;">관리자모드</a>
     &nbsp;
     <a href="index.php" style="color:#C6C4C3;">홈페이지</a>
 

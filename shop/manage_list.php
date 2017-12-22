@@ -26,6 +26,7 @@ $category = $_GET['category'];
   <title>hi 건어물집에 오신걸 환영합니다</title>
   <link rel="stylesheet" href="css\bootstrap.css">
   <link rel="stylesheet" href="css/box_design.css">
+    <link rel="stylesheet" href="css/footer-distributed-with-address-and-phones.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
@@ -108,37 +109,33 @@ $category = $_GET['category'];
 
 
 
+          <div class="col-lg-4"   >
+                      <img src="<?=$row['product_image']?>" alt="Generic placeholder image" width="180" height="140">
+                      <br>
+                      <div id="goods">
 
-                <div class="col-lg-4">
-                  <a href="goods.php?product_id=<?=$row['product_id']?>"><img src="<?=$row['product_image']?>" alt="Generic placeholder image" width="180" height="140"></a>
-                  <br>
-                  <div id="goods">
-                    <strong>상품명 :</strong> <?=$row['product_name']?>
-                    <br>
-                    <strong>가격 :</strong> <?=$row['product_price']?> 원
-                    <br>
+                      <strong>상품명 :</strong> <?=$row['product_name']?>
+                      <br>
+                      <strong>가격 :</strong> <?=$row['product_price']?> 원
+                    </div>
 
-                  </div>
-                    <br>
-                </div>
-
-            <form method="get" action="manage_edit_goods.php">
-              <input type ="hidden" name="product_id" value="<?=$row['product_id']?>">
-              <input type ="hidden" name="category" value="<?=$category?>">
-              <button type="submit" class="btn btn-secondary btn-sm" >상품수정</button>
-            </form>
+                      <form method="get" action="manage_edit_goods.php">
+                        <input type ="hidden" name="product_id" value="<?=$row['product_id']?>">
+                        <input type ="hidden" name="category" value="<?=$category?>">
+                        <button type="submit" class="btn btn-secondary btn-sm" >상품수정</button>
+                      </form>
 
 
-            <form method="get" action="delete_goods.php">
-              <input type ="hidden" name="product_id" value="<?=$row['product_id']?>">
-              <input type ="hidden" name="category" value="<?=$category?>">
-              <!-- hidden 처리해놓을것 -->
-              <button type="submit" onClick="return confirm_delete();">상품삭제
-              </button>
-            </form>
+                      <form method="get" action="delete_goods.php">
+                        <input type ="hidden" name="product_id" value="<?=$row['product_id']?>">
+                        <input type ="hidden" name="category" value="<?=$category?>">
+                        <!-- hidden 처리해놓을것 -->
+                        <button type="submit" onClick="return confirm_delete();">상품삭제
+                        </button>
+                      </form>
 
-            <!-- 우리가 원하는 모양으로 나타내주는 코드를 그냥 php내부에서 html로 만들어줘야할듯 -->
-          </div>
+                      <!-- 우리가 원하는 모양으로 나타내주는 코드를 그냥 php내부에서 html로 만들어줘야할듯 -->
+                    </div>
           <!-- 삭제 컨펌함수 -->
           <script>
             function confirm_delete() {
@@ -175,6 +172,22 @@ $category = $_GET['category'];
 </div>
 </div>
 
+<footer class="footer-distributed">
+ <p class="footer-links" >
+   <a href="manage_index.php" style="color:#C6C4C3;">관리자모드</a>
+   &nbsp;
+   <a href="index.php" style="color:#C6C4C3;">홈페이지</a>
+
+ </p>
+ <hr />
+ 주식회사 건어물집  | 사업자등록번호 : 123-45-67890 | 대표이사 : 김건어물
+ <br>
+ 주소 : 경기도 고양시 덕양구 항공대학로 76 | 개인정보관리책임 : 김보안 | 이메일 : driedfood@naver.com
+ <br>
+ 고객센터 : 02-333-3333 | FAX : 02-333-3333
+ <br>
+ COPYRIGHT © 2017 DRIED FOOD SHOP ALL RIGHTS RESERVED
+</footer>
 
 
 </body>
