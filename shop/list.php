@@ -74,7 +74,27 @@ $category=$_GET['category'];
 <br>
 
 <div class="container">
- <h2>분류</h2>
+
+
+ <h2><script >
+  var category = '<?=$category?>'
+  switch(category){
+    case '1':
+      document.writeln('반건조생선');
+      break;
+    case '2':
+      document.writeln('건어물');
+      break;
+    case '3':
+      document.writeln('젓갈');
+      break;
+    case '4':
+      document.writeln('선물세트');
+      break;
+    default:
+      break;
+  }
+</script></h2>
  <hr>
 
  <dl>
