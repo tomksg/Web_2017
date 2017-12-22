@@ -266,13 +266,13 @@ $src2 = $row['description'];
 
 <br>
 
-  <div class="vertical">
+  <div class="vertical" id="introduction">
   <span class="vertical">
     건어물집 소개
   </span>
 </div>
 <br>
-<section id="introduction" >
+<section  >
  <div class="container">
    <div class="row featurette">
     <div class="col-md-7 col-md-push-5">
@@ -288,13 +288,13 @@ $src2 = $row['description'];
 </div>
 </section>
 <br>
-<div class="vertical">
+<div class="vertical" id="list">
   <span class="vertical">
     상품목록
   </span>
 </div>
 <br>
-<section id="list" class="container">
+<section  class="container">
   <div class="row">
     <div class="col">
       <a href="list.php?category=1">
@@ -315,14 +315,14 @@ $src2 = $row['description'];
       </div>
     </section>
     <br>
-    <div class="vertical">
+    <div class="vertical" id="location" >
       <span class="vertical">
         찾아오시는 길
       </span>
     </div>
     <br>
 
-    <section id="location" class="container">
+    <section class="container">
       <div class="row featurette">
         <div class="col-md-7 col-md-push-4">
       <img class="featurette-image img-responsive center-block map" src="img/info.png" data-src="holder.js/500x500" alt="Generic placeholder image">
