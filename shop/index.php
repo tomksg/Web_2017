@@ -225,7 +225,7 @@ $src2 = $row['description'];
         <img class="first-slide" src="img/1.jpg" alt="First slide">
         <div class="container">
           <div class="carousel-caption">
-            <h1>Example headline.</h1>
+            <h1>건어물의 제왕, 황태</h1>
             <p></p>
           </div>
         </div>
@@ -234,8 +234,8 @@ $src2 = $row['description'];
         <img class="second-slide" src="img/2.jpg" alt="Second slide">
         <div class="container">
           <div class="carousel-caption">
-            <h1>Another example headline.</h1>
-            <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+            <h1>고소한 쥐포</h1>
+            <p>.최고급 쥐치를 건조 가공하여 만들었습니다.</p>
             <p></p>
           </div>
         </div>
@@ -244,8 +244,8 @@ $src2 = $row['description'];
         <img class="third-slide" src="img/3.jpg" alt="Third slide">
         <div class="container">
           <div class="carousel-caption">
-            <h1>One more for good measure.</h1>
-            <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+            <h1>제철별미 : 오징어</h1>
+            <p>동해안에서 갓잡아 신선한 겨울바람에 건조한 건강한 오징어입니다</p>
             <p></p>
           </div>
         </div>
@@ -277,7 +277,7 @@ $src2 = $row['description'];
    <div class="row featurette">
     <div class="col-md-7 col-md-push-5">
       <p class="lead">
-      qq  <!-- 소개 문구 -->
+       <!-- 소개 문구 -->
         <?=$src2?>
       </p>
     </div>

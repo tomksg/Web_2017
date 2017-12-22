@@ -73,7 +73,7 @@ $row=mysqli_fetch_array($result);
                     <td><input type="text"  name="product_from"   value = "<?=$row['product_from']?>" class="form-control"/></td>
                 </tr>
                 <tr>
-                    <th>중량(kg)</th>
+                    <th>중량(g)</th>
                     <td><input type="text"  name="product_weight"   value = "<?=$row['product_weight']?>" class="form-control"/></td>
                 </tr>
                 <tr>
