@@ -110,7 +110,8 @@ $category=$_GET['category'];
         <strong>상품명 :</strong> <?=$row['product_name']?>
         <br>
         <strong>가격 :</strong> <?=$row['product_price']?> 원
-
+        <br>
+        <br>
       </div>
 
       <?php
