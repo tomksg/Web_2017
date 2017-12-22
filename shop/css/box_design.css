@@ -12,10 +12,15 @@ dl img {
 
 .lead{
 	padding:30px;
+  width:500px;
 }
 
 .container{
 	padding-top:30px;
+}
+
+#goods{
+  width:230px;
 }
 
 #banimg {
@@ -102,7 +107,7 @@ h2 {
 
   h1 {
       font-family: title_font;
-  
+
     }
 
 

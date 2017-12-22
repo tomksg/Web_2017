@@ -62,8 +62,28 @@ $search_keyword=$_GET['search_keyword'];
 </div>
  <div class="container">
 
-   <h2>분류</h2>
-   <hr>
+
+    <h1><script >
+     var category = '<?=$search_category?>'
+     switch(category){
+       case '1':
+         document.writeln('반건조생선');
+         break;
+       case '2':
+         document.writeln('건어물');
+         break;
+       case '3':
+         document.writeln('젓갈');
+         break;
+       case '4':
+         document.writeln('선물세트');
+         break;
+       default:
+         break;
+     }
+   </script></h1>
+    <hr>
+
 
    <dl>
 
@@ -83,7 +103,7 @@ $search_keyword=$_GET['search_keyword'];
           ?>
 
 
-          <div class="col-md-3" >
+          <div class="col-md-3" id="goods">
             <a href="goods.php?product_id=<?=$row['product_id']?>"><img src="<?=$row['product_image']?>" alt="Generic placeholder image" width="180" height="140"></a>
             <br>
             <strong>상품명 :</strong> <?=$row['product_name']?>

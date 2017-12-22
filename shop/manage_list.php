@@ -109,7 +109,7 @@ $category = $_GET['category'];
 
 
 
-          <div class="col-md-3" >
+          <div class="col-md-3" id="goods"  >
             <img src="<?=$row['product_image']?>" alt="Generic placeholder image" width="180" height="140">
             <br>
             <strong>상품명 :</strong> <?=$row['product_name']?>
