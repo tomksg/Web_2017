@@ -109,13 +109,18 @@ $category = $_GET['category'];
 
 
 
-          <div class="col-md-3" id="goods"  >
-            <img src="<?=$row['product_image']?>" alt="Generic placeholder image" width="180" height="140">
-            <br>
-            <strong>상품명 :</strong> <?=$row['product_name']?>
-            <br>
-            <strong>가격 :</strong> <?=$row['product_price']?> 원
+                <div class="col-lg-4">
+                  <a href="goods.php?product_id=<?=$row['product_id']?>"><img src="<?=$row['product_image']?>" alt="Generic placeholder image" width="180" height="140"></a>
+                  <br>
+                  <div id="goods">
+                    <strong>상품명 :</strong> <?=$row['product_name']?>
+                    <br>
+                    <strong>가격 :</strong> <?=$row['product_price']?> 원
+                    <br>
 
+                  </div>
+                    <br>
+                </div>
 
             <form method="get" action="manage_edit_goods.php">
               <input type ="hidden" name="product_id" value="<?=$row['product_id']?>">

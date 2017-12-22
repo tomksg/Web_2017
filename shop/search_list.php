@@ -103,14 +103,18 @@ $search_keyword=$_GET['search_keyword'];
           ?>
 
 
-          <div class="col-md-3" id="goods">
-            <a href="goods.php?product_id=<?=$row['product_id']?>"><img src="<?=$row['product_image']?>" alt="Generic placeholder image" width="180" height="140"></a>
-            <br>
-            <strong>상품명 :</strong> <?=$row['product_name']?>
-            <br>
-            <strong>가격 :</strong> <?=$row['product_price']?> 원
+                <div class="col-lg-4">
+                  <a href="goods.php?product_id=<?=$row['product_id']?>"><img src="<?=$row['product_image']?>" alt="Generic placeholder image" width="180" height="140"></a>
+                  <br>
+                  <div id="goods">
+                    <strong>상품명 :</strong> <?=$row['product_name']?>
+                    <br>
+                    <strong>가격 :</strong> <?=$row['product_price']?> 원
+                    <br>
 
-          </div>
+                  </div>
+                    <br>
+                </div>
 
           <?php
         }
