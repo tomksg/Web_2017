@@ -77,7 +77,7 @@ $total_row = $result_row[0] + 1;
                     <td><input type="text"  name="product_from"   value = "" class="form-control"/></td>
                 </tr>
                 <tr>
-                    <th>중량(kg)</th>
+                    <th>중량(g)</th>
                     <td><input type="text"  name="product_weight"   value = "" class="form-control"/></td>
                 </tr>
                 <tr>
