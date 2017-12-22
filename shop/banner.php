@@ -27,10 +27,6 @@
           <li role="presentation" class="js-scroll-trigger" id="bar"><a href="#location">오시는 길</a></li>
         </ul>
 
-        <!-- <img src="img/nav_1.png" alt="...">
-      <img src="img/nav_2.png" alt="...">
-        <img src="img/nav_3.png" alt="..."> -->
-
     <div id="main">
 
     <div class="vertical">
@@ -123,8 +119,6 @@
    <br>
    COPYRIGHT © 2017 DRIED FOOD SHOP ALL RIGHTS RESERVED
    </footer>
-
-
 
 
   </body>

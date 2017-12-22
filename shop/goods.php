@@ -1,30 +1,13 @@
 <?php
-// setcookie("what_you_saw","$product_id",time()+2400);
-// include('lock.php');
 include("config_getdata.php");
-
-
 // url로 넘어온 category와 id값에 따라 디비에서 값 가져오기
 
-// $category=$_GET['category'];
 $product_id=$_GET['product_id'];
-// echo $category;
-// echo '<br>';
-
-// echo '<br>';
-// echo $product_id;
-
-// $query = "SELECT * FROM gunfish WHERE product_id = '$product_id'";
 $result = mysqli_query($bd, "SELECT * FROM gunfish WHERE product_id = '$product_id'");
 $row=mysqli_fetch_array($result);
 
 $category=$row['category'];
-
-// echo $row['product_id'];
-// echo '<br>';
-// echo $row['product_name'];
 ?>
-
 
 <!DOCTYPE html>
 <html lang="kor">
@@ -43,7 +26,6 @@ $category=$row['category'];
 
 </head>
 <body>
-  <!-- <script type="text/javascript">set</script> -->
 
   <div class="banner">
     <td align="center"><a href="index.php" ><img src="img/title.png" border="0" id="banimg" ></a></td>

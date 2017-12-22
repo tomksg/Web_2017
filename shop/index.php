@@ -2,9 +2,7 @@
 include("config_getdata.php");
 
 $query = "SELECT * from main WHERE number =1";
-//$query2 = "SELECT description from main WHERE number=1";
 $result = mysqli_query($bd,$query) or die ("Error Querying database.");
-// $result2 = mysql_query($bd,$query2)
 $row = mysqli_fetch_assoc($result);
 
 $src = $row['image'];
@@ -135,44 +133,16 @@ $src2 = $row['description'];
 
   <div id="quick"><br>
     <div class="btn-group-vertical" role="group">
-    <button class="btn btn-default"><span class="glyphicon glyphicon-chevron-up" aria-hidden="true"></span><a href="#">
+    <button class="btn btn-default"><span class="glyphicon glyphicon-chevron-up" aria-hidden="true"></span><a href="#" color="black">
       <strong> TOP </a></button><br>
-        <button class="btn btn-default"><span class="glyphicon glyphicon-chevron-down" aria-hidden="true"></span><a href="#location">
+        <button class="btn btn-default"><span class="glyphicon glyphicon-chevron-down" aria-hidden="true"></span><a href="#location" color="black">
           <strong>DOWN</a></button>
   </div>
 </div>
 
-
-
-<!--   <div class="navbar-wrapper">
-    <div class="container">
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="icon-bar justified"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </div>
-      </button>
-      <form class="navbar-form navbar-right" role="search">
-       <div class="form-group">
-         <input type="text" class="form-control" placeholder="Search">
-       </div>
-       <button type="submit" class="btn btn-default" onclick="javascript:location.href='localhost/shop/list.php'">Submit</button>
-     </form>
-   </div> -->
-
      <div class="banner">
        <td align="center"><a href="index.php" ><img src="img/title.png" border="0" id="banimg" ></a></td>
      </div>
-
-
-
-
-
-
-
-
 
                 <ul class="nav  nav-justified navbar-default" id="colored">
               <li role="presentation" class="js-scroll-trigger" id="bar"><a href="#introduction">소개</a></li>
@@ -195,10 +165,6 @@ $src2 = $row['description'];
                 </form>
               </div>
 </div>
-    <!-- <img src="img/nav_1.png" alt="...">
-  <img src="img/nav_2.png" alt="...">
-    <img src="img/nav_3.png" alt="..."> -->
-
 
 <br>
 <div id="main">
