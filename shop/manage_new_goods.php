@@ -95,7 +95,7 @@ $total_row = $result_row[0] + 1;
                         <input type="submit" value="저장" onclick="" class="pull-right"/>
                         <!-- 리셋시 원래 서버에 저장되어있는거 업로드 -->
                         <input type="button" value="상품 목록으로... " class="pull-left" onclick="history.back(-1)"/>
-\
+
                 </td>
             </tr>
         </form>

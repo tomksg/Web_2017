@@ -121,7 +121,10 @@ if ($bd->query($query) === TRUE) {
     echo ("<meta http-equiv='Refresh' content='0;
        URL=manage_list.php?category=$category'>");
 } else {
-    echo "Error: " . $query . "<br>" . $bd->error;
+    echo "<script>alert(\"내용이 잘못입력되었습니다!\");</script>";
+    // echo "Error: " . $query . "<br>" . $bd->error;
+    echo ("<meta http-equiv='Refresh' content='0;
+             URL=manage_list.php?category=1'>");
 }
 
 $bd->close();

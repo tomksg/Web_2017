@@ -247,7 +247,7 @@ a{
     <div class="col-md-7 col-md-push-5">
       <p class="lead">
        <!-- 소개 문구 -->
-        <?=$src2?>
+        <strong><?=$src2?></strong>
       </p>
     </div>
     <div class="col-md-5 col-md-pull-7">

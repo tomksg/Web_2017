@@ -22,11 +22,11 @@ include("config_getdata.php");
 <!-- 가게 소개 -->
 
 
-
+<div class="container">
   <h2>관리자 모드</h2>
 
 
-  <hr width="1500">
+  <hr width="100%">
   <!-- 상품분류 선택이미지,페이지 누르면 링크로 redirect되게해야함 -->
 
 
@@ -35,16 +35,16 @@ include("config_getdata.php");
            <a href="manage_main.php">
            <img src="img/img_01.png" alt="move to manage_main" width="300" height="230">
          </a>
-         </div>
+                           </div>
 
-         <div class="col-lg-1">
+         <div class="col-lg-3">
            <a href="manage_list.php?category=1">
          <img src="img/img_02.png" alt="move to manage_list" width="300" height="230">
        </a>
          </div>
        </div>
 
-
+</div>
        <footer class="footer-distributed">
          <p class="footer-links" >
            <a href="manage_index.php" style="color:#C6C4C3;">관리자모드</a>

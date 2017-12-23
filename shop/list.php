@@ -41,7 +41,7 @@ session_destroy();
            <li role="presentation" class="js-scroll-trigger" id="bar"><a href="list.php?category=1">반건조생선</a></li>
              <li role="presentation" class="js-scroll-trigger" id="bar"><a  href="list.php?category=2">건어물</a></li>
              <li role="presentation" class="js-scroll-trigger" id="bar"><a href="list.php?category=3">젓갈</a></li>
-             <li role="presentation" class="js-scroll-trigger" id="bar"><a href="list.php?category=4g">선물세트</a></li>
+             <li role="presentation" class="js-scroll-trigger" id="bar"><a href="list.php?category=4">선물세트</a></li>
            </ul>
 
   <div class="container">
@@ -67,7 +67,7 @@ session_destroy();
 <div class="container">
 
 
- <h1><script >
+ <h1><script>
   var category = '<?=$category?>'
   switch(category){
     case '1':
@@ -86,12 +86,10 @@ session_destroy();
       break;
   }
 </script></h1>
- <hr>
-
+<hr>
  <dl>
 
-
-  <div class="container">
+   <div class="container" style="margin-left:45px;">
 
    <div class="row" >
     <?php
@@ -106,7 +104,7 @@ session_destroy();
       <div class="col-lg-4">
         <a href="goods.php?product_id=<?=$row['product_id']?>"><img src="<?=$row['product_image']?>" alt="Generic placeholder image" width="180" height="140"></a>
         <br>
-        <div id="goods">
+        <div id="goods" style="width:190px">
           <strong>상품명 :</strong> <?=$row['product_name']?>
           <br>
           <strong>가격 :</strong> <?=$row['product_price']?> 원
@@ -121,13 +119,11 @@ session_destroy();
     mysqli_close($bd);
     ?>
   </div>
+  </dl>
 </div>
 
-
-</dl>
-
 </div>
-</div>
+
 
 <footer class="footer-distributed">
  <p class="footer-links" >
